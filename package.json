@@ -1,0 +1,36 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "UofT BootCamp Project#2",
+  "main": "server.js",
+  "scripts": {
+    "test": "eslint",
+    "watch": "nodemon node server.js",
+    "start": "node server.js",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saltamay/UofT_BootCamp_Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saltamay/UofT_BootCamp_Project-2/issues"
+  },
+  "homepage": "https://github.com/saltamay/UofT_BootCamp_Project-2#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^7.0.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  }
+}
