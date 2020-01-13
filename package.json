@@ -4,7 +4,7 @@
   "description": "UofT BootCamp Project#2",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint",
     "watch": "nodemon node server.js",
     "start": "node server.js",
     "lint": "eslint"
