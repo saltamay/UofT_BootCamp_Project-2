@@ -16,7 +16,7 @@
   },
   "rules": {
     "no-console": "off",
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "arrow-parens": ["error", "as-needed"],
     "comma-dangle": [
       "error",
