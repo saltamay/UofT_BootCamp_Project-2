@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "test": "./node_modules/.bin/mocha --reporter spec",
+    "test": "./node_modules/.bin/mocha --reporter spec --exit",
     "watch": "nodemon node server.js",
     "start": "node server.js",
     "lint": "eslint"
