@@ -1,0 +1,15 @@
+.list-group-horizontal .list-group-item {
+  border-left-width: 1px !important;
+  padding: 2.75rem 0 !important;
+}
+
+.search-button button {
+  color: #fff !important;
+  background-color: #ff7001 !important;
+
+  padding: 1rem 2rem !important;
+}
+
+.selected {
+  border: 1px solid #ff7001;
+}
