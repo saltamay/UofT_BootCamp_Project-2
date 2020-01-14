@@ -1,3 +1,8 @@
+-- CREATE DATABASE 
+
+CREATE DATABASE airdate;
+
+USE airdate;
 
 /* CREATE TABLE */
 CREATE TABLE airport_details
