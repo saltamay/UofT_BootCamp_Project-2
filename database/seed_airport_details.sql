@@ -7328,6 +7328,8 @@ VALUES
 1070, 'Angads Airport', 'Oujda', 'Morocco', 'OUD', 'GMFO', 34.78720093, -1.923990011, 1535, 0, 'N', 'Africa/Casablanca'
 );
 
+
+
 /* INSERT QUERY NO: 1048 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
