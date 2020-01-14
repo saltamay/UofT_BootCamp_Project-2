@@ -62,6 +62,7 @@ describe('/users', () => {
           .send({ airport, date, time });
 
         assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
       });
     });
   });
