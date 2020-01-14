@@ -15,3 +15,4 @@ CREATE TABLE airport_details
   tz varchar(50),
   primary key(airport_id)
 );
+
