@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 router.get('/', (req, res) => res.render('index'));
 
-router.post('/users', (req, res, next) => {
+router.post('/users', (req, res) => {
   const { airport, date, time } = req.body;
 
   console.log(airport, date, time);
