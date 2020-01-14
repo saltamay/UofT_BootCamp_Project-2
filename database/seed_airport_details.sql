@@ -1060,7 +1060,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-153, 'Val-d\'Or Airport', 'Val D\'or', 'Canada', 'YVO', 'CYVO', 48.05329895, -77.78279877, 1107, -5, 'A', 'America/Toronto'
+153, 'Val-d Or Airport', 'Val D or', 'Canada', 'YVO', 'CYVO', 48.05329895, -77.78279877, 1107, -5, 'A', 'America/Toronto'
 );
 
 /* INSERT QUERY NO: 153 */
@@ -1312,7 +1312,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-189, 'St. John\'s International Airport', 'St. John\'s', 'Canada', 'YYT', 'CYYT', 47.61859894, -52.75189972, 461, -3.5, 'A', 'America/St_Johns'
+189, 'St. John s International Airport', 'St. Johns', 'Canada', 'YYT', 'CYYT', 47.61859894, -52.75189972, 461, -3.5, 'A', 'America/St_Johns'
 );
 
 /* INSERT QUERY NO: 189 */
@@ -1550,7 +1550,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-224, 'Hassi R\'Mel Airport', 'Tilrempt', 'Algeria', 'HRM', 'DAFH', 32.93040085, 3.311539888, 2540, 1, 'N', 'Africa/Algiers'
+224, 'Hassi RMel Airport', 'Tilrempt', 'Algeria', 'HRM', 'DAFH', 32.93040085, 3.311539888, 2540, 1, 'N', 'Africa/Algiers'
 );
 
 /* INSERT QUERY NO: 223 */
@@ -1753,49 +1753,49 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-253, 'Port Bouet Airport', 'Abidjan', 'Cote d\'Ivoire', 'ABJ', 'DIAP', 5.261390209, -3.926290035, 21, 0, 'N', 'Africa/Abidjan'
+253, 'Port Bouet Airport', 'Abidjan', 'Cote dIvoire', 'ABJ', 'DIAP', 5.261390209, -3.926290035, 21, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 252 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-254, 'Bouaké Airport', 'Bouake', 'Cote d\'Ivoire', 'BYK', 'DIBK', 7.738800049, -5.07366991, 1230, 0, 'N', 'Africa/Abidjan'
+254, 'Bouaké Airport', 'Bouake', 'Cote dIvoire', 'BYK', 'DIBK', 7.738800049, -5.07366991, 1230, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 253 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-255, 'Daloa Airport', 'Daloa', 'Cote d\'Ivoire', 'DJO', 'DIDL', 6.792809963, -6.473189831, 823, 0, 'N', 'Africa/Abidjan'
+255, 'Daloa Airport', 'Daloa', 'Cote dIvoire', 'DJO', 'DIDL', 6.792809963, -6.473189831, 823, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 254 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-256, 'Korhogo Airport', 'Korhogo', 'Cote d\'Ivoire', 'HGO', 'DIKO', 9.387180328, -5.556660175, 1214, 0, 'N', 'Africa/Abidjan'
+256, 'Korhogo Airport', 'Korhogo', 'Cote dIvoire', 'HGO', 'DIKO', 9.387180328, -5.556660175, 1214, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 255 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-257, 'Man Airport', 'Man', 'Cote d\'Ivoire', 'MJC', 'DIMN', 7.272069931, -7.587359905, 1089, 0, 'N', 'Africa/Abidjan'
+257, 'Man Airport', 'Man', 'Cote dIvoire', 'MJC', 'DIMN', 7.272069931, -7.587359905, 1089, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 256 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-258, 'San Pedro Airport', 'San Pedro', 'Cote d\'Ivoire', 'SPY', 'DISP', 4.746719837, -6.660820007, 26, 0, 'N', 'Africa/Abidjan'
+258, 'San Pedro Airport', 'San Pedro', 'Cote dIvoire', 'SPY', 'DISP', 4.746719837, -6.660820007, 26, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 257 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-259, 'Yamoussoukro Airport', 'Yamoussoukro', 'Cote d\'Ivoire', 'ASK', 'DIYO', 6.903170109, -5.365580082, 699, 0, 'N', 'Africa/Abidjan'
+259, 'Yamoussoukro Airport', 'Yamoussoukro', 'Cote dIvoire', 'ASK', 'DIYO', 6.903170109, -5.365580082, 699, 0, 'N', 'Africa/Abidjan'
 );
 
 /* INSERT QUERY NO: 258 */
@@ -5806,7 +5806,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-849, 'Richards Bay Airport', 'Richard\'s Bay', 'South Africa', 'RCB', 'FARB', -28.74099922, 32.09209824, 109, 2, 'U', 'Africa/Johannesburg'
+849, 'Richards Bay Airport', 'Richards Bay', 'South Africa', 'RCB', 'FARB', -28.74099922, 32.09209824, 109, 2, 'U', 'Africa/Johannesburg'
 );
 
 /* INSERT QUERY NO: 831 */
@@ -5883,7 +5883,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-860, 'Tommys Field Airport', 'Tommy\'s Field', 'South Africa', '\N', 'FATF', -28.26000023, 22.9932003, 4360, 2, 'U', 'Africa/Johannesburg'
+860, 'Tommys Field Airport', 'Tommys Field', 'South Africa', '\N', 'FATF', -28.26000023, 22.9932003, 4360, 2, 'U', 'Africa/Johannesburg'
 );
 
 /* INSERT QUERY NO: 842 */
@@ -6163,7 +6163,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-900, 'N\'Gaoundéré Airport', 'N\'gaoundere', 'Cameroon', 'NGE', 'FKKN', 7.357009888, 13.55920029, 3655, 1, 'N', 'Africa/Douala'
+900, 'NGaoundéré Airport', 'Ngaoundere', 'Cameroon', 'NGE', 'FKKN', 7.357009888, 13.55920029, 3655, 1, 'N', 'Africa/Douala'
 );
 
 /* INSERT QUERY NO: 882 */
@@ -6639,14 +6639,14 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-970, 'Libreville Leon M\'ba International Airport', 'Libreville', 'Gabon', 'LBV', 'FOOL', 0.458600014, 9.412280083, 39, 1, 'N', 'Africa/Libreville'
+970, 'Libreville Leon Mba International Airport', 'Libreville', 'Gabon', 'LBV', 'FOOL', 0.458600014, 9.412280083, 39, 1, 'N', 'Africa/Libreville'
 );
 
 /* INSERT QUERY NO: 950 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-971, 'M\'Vengue El Hadj Omar Bongo Ondimba International Airport', 'Franceville', 'Gabon', 'MVB', 'FOON', -1.656159997, 13.43799973, 1450, 1, 'N', 'Africa/Libreville'
+971, 'MVengue El Hadj Omar Bongo Ondimba International Airport', 'Franceville', 'Gabon', 'MVB', 'FOON', -1.656159997, 13.43799973, 1450, 1, 'N', 'Africa/Libreville'
 );
 
 /* INSERT QUERY NO: 951 */
@@ -8818,7 +8818,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1294, 'Aire-sur-l\'Adour Airport', 'Aire-sur-l\'adour', 'France', '\N', 'LFDA', 43.70940018, -0.245278001, 259, 1, 'E', 'Europe/Paris'
+1294, 'Aire-sur-lAdour Airport', 'Aire-sur-ladour', 'France', '\N', 'LFDA', 43.70940018, -0.245278001, 259, 1, 'E', 'Europe/Paris'
 );
 
 /* INSERT QUERY NO: 1261 */
@@ -10897,7 +10897,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1598, 'Ben Ya\'akov Airport', 'Rosh Pina', 'Israel', 'RPN', 'LLIB', 32.98099899, 35.57189941, 922, 2, 'E', 'Asia/Jerusalem'
+1598, 'Ben Yaakov Airport', 'Rosh Pina', 'Israel', 'RPN', 'LLIB', 32.98099899, 35.57189941, 922, 2, 'E', 'Asia/Jerusalem'
 );
 
 /* INSERT QUERY NO: 1558 */
@@ -13151,14 +13151,14 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1944, 'Governor\'s Harbour Airport', 'Governor\'s Harbor', 'Bahamas', 'GHB', 'MYEM', 25.28470039, -76.33100128, 26, -5, 'U', 'America/Nassau'
+1944, 'Governors Harbour Airport', 'Governors Harbor', 'Bahamas', 'GHB', 'MYEM', 25.28470039, -76.33100128, 26, -5, 'U', 'America/Nassau'
 );
 
 /* INSERT QUERY NO: 1880 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1945, 'Normans Cay Airport', 'Norman\'s Cay', 'Bahamas', 'NMC', 'MYEN', 24.59429932, -76.82019806, 8, -5, 'U', 'America/Nassau'
+1945, 'Normans Cay Airport', 'Normans Cay', 'Bahamas', 'NMC', 'MYEN', 24.59429932, -76.82019806, 8, -5, 'U', 'America/Nassau'
 );
 
 /* INSERT QUERY NO: 1881 */
@@ -13193,7 +13193,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1950, 'Deadman\'s Cay Airport', 'Dead Man\'s Cay', 'Bahamas', 'LGI', 'MYLD', 23.17900085, -75.09359741, 9, -5, 'U', 'America/Nassau'
+1950, 'Deadmans Cay Airport', 'Dead Mans Cay', 'Bahamas', 'LGI', 'MYLD', 23.17900085, -75.09359741, 9, -5, 'U', 'America/Nassau'
 );
 
 /* INSERT QUERY NO: 1886 */
@@ -13277,14 +13277,14 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1963, 'Fua\'amotu International Airport', 'Tongatapu', 'Tonga', 'TBU', 'NFTF', -21.24119949, -175.1499939, 126, 13, 'U', 'Pacific/Tongatapu'
+1963, 'Fuaamotu International Airport', 'Tongatapu', 'Tonga', 'TBU', 'NFTF', -21.24119949, -175.1499939, 126, 13, 'U', 'Pacific/Tongatapu'
 );
 
 /* INSERT QUERY NO: 1898 */
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-1964, 'Vava\'u International Airport', 'Vava\'u', 'Tonga', 'VAV', 'NFTV', -18.58530045, -173.9620056, 236, 13, 'U', 'Pacific/Tongatapu'
+1964, 'Vavau International Airport', 'Vavau', 'Tonga', 'VAV', 'NFTV', -18.58530045, -173.9620056, 236, 13, 'U', 'Pacific/Tongatapu'
 );
 
 /* INSERT QUERY NO: 1899 */
@@ -13746,7 +13746,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-2033, 'South Pole Station Airport', 'Stephen\'s Island', 'Antarctica', '\N', 'NZSP', -90, 0, 9300, 12, 'U', 'Antarctica/South_Pole'
+2033, 'South Pole Station Airport', 'Stephens Island', 'Antarctica', '\N', 'NZSP', -90, 0, 9300, 12, 'U', 'Antarctica/South_Pole'
 );
 
 /* INSERT QUERY NO: 1965 */
@@ -13998,7 +13998,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-2069, 'Ha\'il Airport', 'Hail', 'Saudi Arabia', 'HAS', 'OEHL', 27.437901, 41.686298, 3331, 3, 'U', 'Asia/Riyadh'
+2069, 'Hail Airport', 'Hail', 'Saudi Arabia', 'HAS', 'OEHL', 27.437901, 41.686298, 3331, 3, 'U', 'Asia/Riyadh'
 );
 
 /* INSERT QUERY NO: 2001 */
@@ -15839,7 +15839,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-2366, 'Sokcho Airport', 'Sokch\'o', 'South Korea', '\N', 'RKND', 38.14260101, 128.598999, 92, 9, 'U', 'Asia/Seoul'
+2366, 'Sokcho Airport', 'Sokcho', 'South Korea', '\N', 'RKND', 38.14260101, 128.598999, 92, 9, 'U', 'Asia/Seoul'
 );
 
 /* INSERT QUERY NO: 2264 */
@@ -18471,7 +18471,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-2775, 'Saint-Georges-de-l\'Oyapock Airport', 'St.-georges Oyapock', 'French Guiana', 'OYP', 'SOOG', 3.897599936, -51.80410004, 46, -3, 'U', 'America/Cayenne'
+2775, 'Saint-Georges-de-lOyapock Airport', 'St.-georges Oyapock', 'French Guiana', 'OYP', 'SOOG', 3.897599936, -51.80410004, 46, -3, 'U', 'America/Cayenne'
 );
 
 /* INSERT QUERY NO: 2640 */
@@ -19150,7 +19150,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-2879, 'L\'Espérance Airport', 'St. Martin', 'Guadeloupe', 'SFG', 'TFFG', 18.09989929, -63.04719925, 7, -4, 'U', '\N'
+2879, 'LEspérance Airport', 'St. Martin', 'Guadeloupe', 'SFG', 'TFFG', 18.09989929, -63.04719925, 7, -4, 'U', '\N'
 );
 
 /* INSERT QUERY NO: 2737 */
@@ -20347,7 +20347,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3068, 'Cox\'s Bazar Airport', 'Cox\'s Bazar', 'Bangladesh', 'CXB', 'VGCB', 21.45219994, 91.96389771, 12, 6, 'U', 'Asia/Dhaka'
+3068, 'Coxs Bazar Airport', 'Coxs Bazar', 'Bangladesh', 'CXB', 'VGCB', 21.45219994, 91.96389771, 12, 6, 'U', 'Asia/Dhaka'
 );
 
 /* INSERT QUERY NO: 2908 */
@@ -22139,7 +22139,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3356, 'Coffs Harbour Airport', 'Coff\'s Harbour', 'Australia', 'CFS', 'YSCH', -30.32060051, 153.1159973, 18, 10, 'O', 'Australia/Sydney'
+3356, 'Coffs Harbour Airport', 'Coffs Harbour', 'Australia', 'CFS', 'YSCH', -30.32060051, 153.1159973, 18, 10, 'O', 'Australia/Sydney'
 );
 
 /* INSERT QUERY NO: 3164 */
@@ -22251,7 +22251,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3374, 'Shenzhen Bao\'an International Airport', 'Shenzhen', 'China', 'SZX', 'ZGSZ', 22.63929939, 113.810997, 13, 8, 'U', 'Asia/Shanghai'
+3374, 'Shenzhen Baoan International Airport', 'Shenzhen', 'China', 'SZX', 'ZGSZ', 22.63929939, 113.810997, 13, 8, 'U', 'Asia/Shanghai'
 );
 
 /* INSERT QUERY NO: 3180 */
@@ -22286,7 +22286,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3379, 'Xi\'an Xianyang International Airport', 'Xi\'an', 'China', 'XIY', 'ZLXY', 34.447102, 108.751999, 1572, 8, 'U', 'Asia/Shanghai'
+3379, 'Xian Xianyang International Airport', 'Xian', 'China', 'XIY', 'ZLXY', 34.447102, 108.751999, 1572, 8, 'U', 'Asia/Shanghai'
 );
 
 /* INSERT QUERY NO: 3185 */
@@ -25415,7 +25415,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3830, 'Chicago O\'Hare International Airport', 'Chicago', 'United States', 'ORD', 'KORD', 41.9786, -87.9048, 672, -6, 'A', 'America/Chicago'
+3830, 'Chicago OHare International Airport', 'Chicago', 'United States', 'ORD', 'KORD', 41.9786, -87.9048, 672, -6, 'A', 'America/Chicago'
 );
 
 /* INSERT QUERY NO: 3632 */
@@ -26367,7 +26367,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3975, 'Ta\'izz International Airport', 'Taiz', 'Yemen', 'TAI', 'OYTZ', 13.68599987, 44.13909912, 4838, 3, 'U', 'Asia/Aden'
+3975, 'Taizz International Airport', 'Taiz', 'Yemen', 'TAI', 'OYTZ', 13.68599987, 44.13909912, 4838, 3, 'U', 'Asia/Aden'
 );
 
 /* INSERT QUERY NO: 3768 */
@@ -26402,7 +26402,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-3980, 'Sana\'a International Airport', 'Sanaa', 'Yemen', 'SAH', 'OYSN', 15.47630024, 44.21969986, 7216, 3, 'U', 'Asia/Aden'
+3980, 'Sanaa International Airport', 'Sanaa', 'Yemen', 'SAH', 'OYSN', 15.47630024, 44.21969986, 7216, 3, 'U', 'Asia/Aden'
 );
 
 /* INSERT QUERY NO: 3773 */
@@ -26983,7 +26983,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-4075, 'Faa\'a International Airport', 'Papeete', 'French Polynesia', 'PPT', 'NTAA', -17.553699, -149.606995, 5, -10, 'U', 'Pacific/Tahiti'
+4075, 'Faaa International Airport', 'Papeete', 'French Polynesia', 'PPT', 'NTAA', -17.553699, -149.606995, 5, -10, 'U', 'Pacific/Tahiti'
 );
 
 /* INSERT QUERY NO: 3856 */
@@ -27109,7 +27109,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-4095, 'Hawke\'s Bay Airport', 'NAPIER', 'New Zealand', 'NPE', 'NZNR', -39.465801, 176.869995, 6, 12, 'Z', 'Pacific/Auckland'
+4095, 'Hawkes Bay Airport', 'NAPIER', 'New Zealand', 'NPE', 'NZNR', -39.465801, 176.869995, 6, 12, 'Z', 'Pacific/Auckland'
 );
 
 /* INSERT QUERY NO: 3874 */
@@ -28096,7 +28096,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-4265, 'Martha\'s Vineyard Airport', 'Vineyard Haven MA', 'United States', 'MVY', 'KMVY', 41.39310074, -70.61430359, 67, -5, 'A', 'America/New_York'
+4265, 'Marthas Vineyard Airport', 'Vineyard Haven MA', 'United States', 'MVY', 'KMVY', 41.39310074, -70.61430359, 67, -5, 'A', 'America/New_York'
 );
 
 /* INSERT QUERY NO: 4015 */
@@ -28215,7 +28215,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-4290, 'Fagali\'i Airport', 'Apia', 'Samoa', 'FGI', 'NSFI', -13.84869957, -171.7400055, 131, 13, 'U', 'Pacific/Apia'
+4290, 'Fagalii Airport', 'Apia', 'Samoa', 'FGI', 'NSFI', -13.84869957, -171.7400055, 131, 13, 'U', 'Pacific/Apia'
 );
 
 /* INSERT QUERY NO: 4032 */
@@ -28824,7 +28824,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5405, 'Gwaunaru\'u Airport', 'Auki', 'Solomon Islands', 'AKS', 'AGGA', -8.70257, 160.682007, 5, 11, 'U', 'Pacific/Guadalcanal'
+5405, 'Gwaunaruu Airport', 'Auki', 'Solomon Islands', 'AKS', 'AGGA', -8.70257, 160.682007, 5, 11, 'U', 'Pacific/Guadalcanal'
 );
 
 /* INSERT QUERY NO: 4119 */
@@ -29524,7 +29524,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5511, 'St Georges Airport', 'Lutselk\'e', 'Canada', '\N', 'CYSG', 46.096401, -70.714699, 893, -5, 'A', 'America/Toronto'
+5511, 'St Georges Airport', 'Lutselke', 'Canada', '\N', 'CYSG', 46.096401, -70.714699, 893, -5, 'A', 'America/Toronto'
 );
 
 /* INSERT QUERY NO: 4219 */
@@ -29538,7 +29538,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5513, 'Mary\'s Harbour Airport', 'Mary\'s Harbour', 'Canada', 'YMH', 'CYMH', 52.30279922, -55.84719849, 38, -3.5, 'A', 'America/St_Johns'
+5513, 'Marys Harbour Airport', 'Marys Harbour', 'Canada', 'YMH', 'CYMH', 52.30279922, -55.84719849, 38, -3.5, 'A', 'America/St_Johns'
 );
 
 /* INSERT QUERY NO: 4221 */
@@ -29951,7 +29951,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5572, 'Land\'s End Airport', 'Land\'s End', 'United Kingdom', 'LEQ', 'EGHC', 50.102798, -5.67056, 398, 0, 'E', 'Europe/London'
+5572, 'Lands End Airport', 'Lands End', 'United Kingdom', 'LEQ', 'EGHC', 50.102798, -5.67056, 398, 0, 'E', 'Europe/London'
 );
 
 /* INSERT QUERY NO: 4280 */
@@ -30756,7 +30756,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5699, 'La Abraq Airport', 'Al Bayda\'', 'Libya', 'LAQ', 'HLLQ', 32.7887001, 21.96430016, 2157, 2, 'N', 'Africa/Tripoli'
+5699, 'La Abraq Airport', 'Al Bayda', 'Libya', 'LAQ', 'HLLQ', 32.7887001, 21.96430016, 2157, 2, 'N', 'Africa/Tripoli'
 );
 
 /* INSERT QUERY NO: 4395 */
@@ -31316,7 +31316,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5782, 'Île d\'Yeu Airport', 'Île d\'Yeu', 'France', 'IDY', 'LFEY', 46.71860123, -2.391109943, 79, 1, 'E', 'Europe/Paris'
+5782, 'Île dYeu Airport', 'Île dYeu', 'France', 'IDY', 'LFEY', 46.71860123, -2.391109943, 79, 1, 'E', 'Europe/Paris'
 );
 
 /* INSERT QUERY NO: 4475 */
@@ -31372,7 +31372,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5792, 'Salerno Costa d\'Amalfi Airport', 'Salerno', 'Italy', 'QSR', 'LIRI', 40.620399, 14.9113, 119, 1, 'E', 'Europe/Rome'
+5792, 'Salerno Costa dAmalfi Airport', 'Salerno', 'Italy', 'QSR', 'LIRI', 40.620399, 14.9113, 119, 1, 'E', 'Europe/Rome'
 );
 
 /* INSERT QUERY NO: 4483 */
@@ -31680,7 +31680,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5857, 'Arthur\'s Town Airport', 'Arthur\'s Town', 'Bahamas', 'ATC', 'MYCA', 24.6294, -75.673797, 18, -5, 'U', 'America/Nassau'
+5857, 'Arthurs Town Airport', 'Arthurs Town', 'Bahamas', 'ATC', 'MYCA', 24.6294, -75.673797, 18, -5, 'U', 'America/Nassau'
 );
 
 /* INSERT QUERY NO: 4527 */
@@ -31848,7 +31848,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5881, 'Mata\'aho Airport', '"Angaha', ' Niuafo\'ou Island"', 'Tonga', 'NFO', 0, -15.57079983, -175.6329956, 160, '13', 'U'
+5881, 'Mataaho Airport', '"Angaha', ' Niuafoou Island"', 'Tonga', 'NFO', 0, -15.57079983, -175.6329956, 160, '13', 'U'
 );
 
 /* INSERT QUERY NO: 4551 */
@@ -32086,7 +32086,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-5916, 'Dillon\'s Bay Airport', 'Dillon\'s Bay', 'Vanuatu', 'DLY', 'NVVD', -18.76939964, 169.0010071, 630, 11, 'U', 'Pacific/Efate'
+5916, 'Dillons Bay Airport', 'Dillons Bay', 'Vanuatu', 'DLY', 'NVVD', -18.76939964, 169.0010071, 630, 11, 'U', 'Pacific/Efate'
 );
 
 /* INSERT QUERY NO: 4585 */
@@ -34998,7 +34998,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-6367, 'Yan\'an Ershilipu Airport', 'Yan\'an', 'China', 'ENY', 'ZLYA', 36.636902, 109.554001, 3100, 8, 'U', 'Asia/Shanghai'
+6367, 'Yanan Ershilipu Airport', 'Yanan', 'China', 'ENY', 'ZLYA', 36.636902, 109.554001, 3100, 8, 'U', 'Asia/Shanghai'
 );
 
 /* INSERT QUERY NO: 5001 */
@@ -35068,7 +35068,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-6377, 'Pu\'er Simao Airport', 'Simao', 'China', 'SYM', 'ZPSM', 22.793301, 100.959, 0, 8, 'U', 'Asia/Shanghai'
+6377, 'Puer Simao Airport', 'Simao', 'China', 'SYM', 'ZPSM', 22.793301, 100.959, 0, 8, 'U', 'Asia/Shanghai'
 );
 
 /* INSERT QUERY NO: 5011 */
@@ -35446,7 +35446,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-6435, 'Bao\'anying Airport', 'Panzhihua', 'China', 'PZI', 'ZUZH', 26.54, 101.79852, 1620, 8, 'N', 'Asia/Shanghai'
+6435, 'Baoanying Airport', 'Panzhihua', 'China', 'PZI', 'ZUZH', 26.54, 101.79852, 1620, 8, 'N', 'Asia/Shanghai'
 );
 
 /* INSERT QUERY NO: 5065 */
@@ -35733,7 +35733,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-6718, 'St Mary\'s Airport', 'St Mary\'s', 'United States', 'KSM', 'PASM', 62.0605011, -163.302002, 312, -9, 'A', 'America/Anchorage'
+6718, 'St Marys Airport', 'St Marys', 'United States', 'KSM', 'PASM', 62.0605011, -163.302002, 312, -9, 'A', 'America/Anchorage'
 );
 
 /* INSERT QUERY NO: 5106 */
@@ -39506,7 +39506,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-7517, 'Ryan\'s Creek Aerodrome', 'Stewart Island', 'New Zealand', 'SZS', 'NZRC', -46.8997, 168.100998, 62, 12, 'U', 'Pacific/Auckland'
+7517, 'Ryans Creek Aerodrome', 'Stewart Island', 'New Zealand', 'SZS', 'NZRC', -46.8997, 168.100998, 62, 12, 'U', 'Pacific/Auckland'
 );
 
 /* INSERT QUERY NO: 5645 */
@@ -40738,7 +40738,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-7838, 'Saint-Cyr-l\'École Airport', 'Saint-Cyr', 'France', '\N', 'LFPZ', 48.81140137, 2.074719906, 371, 1, 'E', 'Europe/Paris'
+7838, 'Saint-Cyr-lÉcole Airport', 'Saint-Cyr', 'France', '\N', 'LFPZ', 48.81140137, 2.074719906, 371, 1, 'E', 'Europe/Paris'
 );
 
 /* INSERT QUERY NO: 5821 */
@@ -45526,7 +45526,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-9189, 'Coeur D\'Alene - Pappy Boyington Field', 'Coeur d\'Alene', 'United States', 'COE', 'KCOE', 47.77429962, -116.8199997, 2320, -8, 'A', 'America/Los_Angeles'
+9189, 'Coeur DAlene - Pappy Boyington Field', 'Coeur dAlene', 'United States', 'COE', 'KCOE', 47.77429962, -116.8199997, 2320, -8, 'A', 'America/Los_Angeles'
 );
 
 /* INSERT QUERY NO: 6505 */
@@ -46121,7 +46121,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-9450, 'W H \'Bud\' Barron Airport', 'Dublin', 'United States', 'DBN', 'KDBN', 32.56439972, -82.98529816, 309, -5, 'A', 'America/New_York'
+9450, 'W H Bud Barron Airport', 'Dublin', 'United States', 'DBN', 'KDBN', 32.56439972, -82.98529816, 309, -5, 'A', 'America/New_York'
 );
 
 /* INSERT QUERY NO: 6590 */
@@ -46303,7 +46303,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-9759, 'Abaco I Walker C Airport', 'Walker\'s Cay', 'Bahamas', 'WKR', 'MYAW', 27.26670074, -78.39969635, 10, -5, 'A', '\N'
+9759, 'Abaco I Walker C Airport', 'Walkers Cay', 'Bahamas', 'WKR', 'MYAW', 27.26670074, -78.39969635, 10, -5, 'A', '\N'
 );
 
 /* INSERT QUERY NO: 6616 */
@@ -47612,7 +47612,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-10941, 'Arxan Yi\'ershi Airport', 'Arxan', 'China', 'YIE', 'ZBES', 47.3106, 119.9117, 2925, 8, 'N', '\N'
+10941, 'Arxan Yiershi Airport', 'Arxan', 'China', 'YIE', 'ZBES', 47.3106, 119.9117, 2925, 8, 'N', '\N'
 );
 
 /* INSERT QUERY NO: 6803 */
@@ -47787,7 +47787,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-11049, 'La Grand\'combe Airport', 'La Grand\'Combe', 'France', '\N', 'LFTN', 44.24440002, 4.012219906, 1647, 1, 'E', '\N'
+11049, 'La Grandcombe Airport', 'La GrandCombe', 'France', '\N', 'LFTN', 44.24440002, 4.012219906, 1647, 1, 'E', '\N'
 );
 
 /* INSERT QUERY NO: 6828 */
@@ -50195,7 +50195,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-11933, 'Schroeder\'s field', 'Cochrane', 'Chile', '\N', 'SCHR', 35.071718, -91.738801, 0, 0, '\N', '\N'
+11933, 'Schroeders field', 'Cochrane', 'Chile', '\N', 'SCHR', 35.071718, -91.738801, 0, 0, '\N', '\N'
 );
 
 /* INSERT QUERY NO: 7172 */
@@ -51840,7 +51840,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13193, 'Qionghai Bo\'ao Airport', 'Qionghai', 'China', 'BAR', 'ZJQH', 19.13824, 110.454775, 30, 8, 'N', '\N'
+13193, 'Qionghai Boao Airport', 'Qionghai', 'China', 'BAR', 'ZJQH', 19.13824, 110.454775, 30, 8, 'N', '\N'
 );
 
 /* INSERT QUERY NO: 7407 */
@@ -51875,7 +51875,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13212, 'Odienne Airport', 'Odienne', 'Cote d\'Ivoire', 'KEO', 'DIOD', 9.5, -7.566999912, 1365, 0, 'U', '\N'
+13212, 'Odienne Airport', 'Odienne', 'Cote dIvoire', 'KEO', 'DIOD', 9.5, -7.566999912, 1365, 0, 'U', '\N'
 );
 
 /* INSERT QUERY NO: 7412 */
@@ -52414,7 +52414,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13411, 'St Pierre d\'Oléron Airfield', 'Saint Pierre d\'Oleron', 'France', '\N', 'LFDP', 45.959202, -1.31611, 20, -1, 'E', '\N'
+13411, 'St Pierre dOléron Airfield', 'Saint Pierre dOleron', 'France', '\N', 'LFDP', 45.959202, -1.31611, 20, -1, 'E', '\N'
 );
 
 /* INSERT QUERY NO: 7489 */
@@ -52687,7 +52687,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13470, 'Baicheng Chang\'an Airport', 'Baicheng', 'China', 'DBC', 'ZYBA', 45.505278, 123.019722, 480, 8, 'N', '\N'
+13470, 'Baicheng Changan Airport', 'Baicheng', 'China', 'DBC', 'ZYBA', 45.505278, 123.019722, 480, 8, 'N', '\N'
 );
 
 /* INSERT QUERY NO: 7528 */
@@ -52848,7 +52848,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13497, 'Fazenda Mequens Airport', 'ALTA FLORESTA D\'OESTE', 'Brazil', '\N', 'SJTF', -13.06194401, -62.25749969, 552, -4, 'S', '\N'
+13497, 'Fazenda Mequens Airport', 'ALTA FLORESTA DOESTE', 'Brazil', '\N', 'SJTF', -13.06194401, -62.25749969, 552, -4, 'S', '\N'
 );
 
 /* INSERT QUERY NO: 7551 */
@@ -53121,7 +53121,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13595, 'Fazenda Várzea Funda Airport', 'PRIMAVERA D\'OESTE', 'Brazil', '\N', 'SIEL', -16.58361053, -57.73222351, 709, -4, 'S', '\N'
+13595, 'Fazenda Várzea Funda Airport', 'PRIMAVERA DOESTE', 'Brazil', '\N', 'SIEL', -16.58361053, -57.73222351, 709, -4, 'S', '\N'
 );
 
 /* INSERT QUERY NO: 7590 */
@@ -53345,7 +53345,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13669, 'FIC Heliport', 'MACHADINHO D\'OESTE', 'Brazil', '\N', 'SIMC', -22.71138954, -47.14110947, 1985, -4, 'S', '\N'
+13669, 'FIC Heliport', 'MACHADINHO DOESTE', 'Brazil', '\N', 'SIMC', -22.71138954, -47.14110947, 1985, -4, 'S', '\N'
 );
 
 /* INSERT QUERY NO: 7622 */
@@ -53422,7 +53422,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13711, 'Lutselk\'e Airport', 'Lutselk\'e', 'Canada', 'YSG', 'CYLK', 62.418303, -110.681998, 596, 0, '\N', '\N'
+13711, 'Lutselke Airport', 'Lutselke', 'Canada', 'YSG', 'CYLK', 62.418303, -110.681998, 596, 0, '\N', '\N'
 );
 
 /* INSERT QUERY NO: 7633 */
@@ -53695,7 +53695,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-13830, 'Fazenda Kajussol Airport', 'Alta Floresta D\'Oeste', 'Brazil', '\N', 'SJYD', -11.96472168, -61.6866684, 636, -4, 'S', '\N'
+13830, 'Fazenda Kajussol Airport', 'Alta Floresta DOeste', 'Brazil', '\N', 'SJYD', -11.96472168, -61.6866684, 636, -4, 'S', '\N'
 );
 
 /* INSERT QUERY NO: 7672 */
@@ -53821,7 +53821,7 @@ VALUES
 INSERT INTO airport_details(airport_id, name, city, country, iata, icao, latitude, longitude, altitude, timezone, dst, tz)
 VALUES
 (
-14101, 'Rustaq Airport', 'Al Masna\'ah', 'Oman', 'MNH', 'OORQ', 23.640556, 57.4875, 349, 0, '\N', '\N'
+14101, 'Rustaq Airport', 'Al Masna ah', 'Oman', 'MNH', 'OORQ', 23.640556, 57.4875, 349, 0, '\N', '\N'
 );
 
 /* INSERT QUERY NO: 7690 */
