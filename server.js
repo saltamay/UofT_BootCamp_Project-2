@@ -2,7 +2,8 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./routes/api-routes');
 
-const connection = require('./config/connection');
+// TODO: Used to make queries
+// const connection = require('./config/connection');
 
 const PORT = process.env.PORT || 3000;
 
