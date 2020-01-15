@@ -28,6 +28,7 @@
     "jsdom": "^16.0.0",
     "mocha": "^7.0.0",
     "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1",
     "supertest": "^4.0.2"
   },
   "dependencies": {
