@@ -3,6 +3,18 @@
   padding: 2.75rem 0 !important;
 }
 
+#suggestions {
+  position: absolute;
+  z-index: 10;
+}
+
+#suggestions .list-group-item:hover {
+  color: #fff;
+  background-color: #ff7001;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .search-button button {
   color: #fff !important;
   background-color: #ff7001 !important;
