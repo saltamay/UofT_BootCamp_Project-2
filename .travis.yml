@@ -5,8 +5,9 @@ npm: true
 cache:
   directories:
     - node_modules
-script:
-  - echo "skipping tests"
+branches:
+  only:
+    - master
 deploy:
   provider: heroku
   api_key:
