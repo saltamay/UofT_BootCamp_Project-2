@@ -43,7 +43,7 @@ CREATE TABLE trip_details
     user_id int NOT NULL,
     airport varchar(100),
     time varchar(100),
-	primary key(trip_id),
-	CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES user_details(id)
+	primary key(id),
+	CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users_details(id)
 );
 
