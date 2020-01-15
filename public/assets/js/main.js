@@ -41,3 +41,44 @@ document
       }
     }
   });
+
+// Airport Search Autocomplete
+const handleArraySelect = e => {
+  const airportInput = document.querySelector('#airport');
+  const airportList = document.querySelector('#suggestions');
+
+  airportInput.value = e.currentTarget.querySelector('.airport-info').innerText;
+  airportList.innerHTML = '';
+};
+const displayMatches = airportsArray => {
+  document.getElementById('suggestions').innerHTML = '';
+  airportsArray.forEach(airport => {
+    const li = document.createElement('li');
+    li.classList.add('list-group-item', 'list-group-item-light');
+    li.innerHTML = `<span class="airport-info">${airport.name}, ${airport.city}</span>`;
+    li.onclick = event => handleArraySelect(event);
+    document.getElementById('suggestions').appendChild(li);
+  });
+};
+
+document.getElementById('airport').addEventListener('keyup', async e => {
+  const query = e.target.value;
+
+  if (query.length >= 3) {
+    try {
+      const res = await fetch(`/airports?search=${query}`, {
+        method: 'GET',
+        headers: {
+          'Content-type': 'application/json'
+        }
+      });
+
+      if (res.ok) {
+        const jsonRes = await res.json();
+        displayMatches(jsonRes);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+});
