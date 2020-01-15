@@ -4,6 +4,10 @@ node_js:
 npm: true
 cache:
   directories:
+    - node_modules
+branches:
+  only:
+    - master
   - node_modules
 deploy:
   provider: heroku
