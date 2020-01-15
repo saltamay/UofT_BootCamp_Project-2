@@ -16,13 +16,12 @@ if (process.env.JAWSDB_URL) {
     port: '3306',
     host: 'nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     user: 'tc73jbdiqqesrb5w',
-    password: 'eaysnxddxs48abp8',
+    password: 'svyl9utk5zqaf41c',
     database: 'otr85dh0ggpmbqf6'
   });
 }
 
 // connection.connect();
-
 
 // Connect to the database
 connection.connect(err => {
