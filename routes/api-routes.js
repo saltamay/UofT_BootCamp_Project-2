@@ -15,22 +15,63 @@ router.get('/users', (req, res) => {
 });
 
 router.post('/users', (req, res) => {
-  const { airport, date, time } = req.body;
+  if (req.body.hasOwnChild('airport')) {
+    const { airport, date, time } = req.body;
 
-  const airportName = airport.split(', ')[0];
+    const airportName = airport.split(', ')[0];
 
-  console.log(airportName, date, time);
+    console.log(airportName, date, time);
 
-  const query = `SELECT * FROM users_details JOIN trip_details ON users_details.id = trip_details.user_id WHERE trip_details.airport = '${airportName}' AND trip_details.trip_date = '${date}'`;
+    const query = `SELECT * FROM users_details JOIN trip_details ON users_details.id = trip_details.user_id WHERE trip_details.airport = '${airportName}' AND trip_details.trip_date = '${date}'`;
 
-  connection.query(query, (error, results) => {
-    if (error) throw error;
+    connection.query(query, (error, results) => {
+      if (error) throw error;
 
-    res.status(200).send({
-      success: true,
-      users: results
+      res.status(200).send({
+        success: true,
+        users: results
+      });
     });
-  });
+  } else {
+    const {
+      firstName,
+      lastName,
+      birthDate,
+      email,
+      relationshipStatus,
+      height,
+      hairColour,
+      tagline,
+      bio,
+      imageUrl
+    } = req.body;
+
+    const query = 'INSERT INTO users_details (first_name, last_name, birthdate, email, relationship_status, height, hair_color, tagline, bio, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+
+    connection.query(
+      query,
+      [
+        firstName,
+        lastName,
+        birthDate,
+        email,
+        relationshipStatus,
+        height,
+        hairColour,
+        tagline,
+        bio,
+        imageUrl
+      ],
+      error => {
+        if (error) throw error;
+
+        res.status(200).send({
+          success: true,
+          user: req.body
+        });
+      }
+    );
+  }
 });
 
 router.get('/airports', (req, res) => {
