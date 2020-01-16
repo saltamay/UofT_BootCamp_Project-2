@@ -3,6 +3,17 @@ const connection = require('../config/connection');
 
 router.get('/', (req, res) => res.render('index'));
 
+router.get('/users', (req, res) => {
+  connection.query('SELECT * FROM users_details', (error, results) => {
+    if (error) throw error;
+
+    res.status(200).send({
+      success: true,
+      users: results
+    });
+  });
+});
+
 router.post('/users', (req, res) => {
   const { airport, date, time } = req.body;
 
