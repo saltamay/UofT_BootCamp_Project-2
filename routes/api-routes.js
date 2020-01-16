@@ -17,10 +17,19 @@ router.get('/users', (req, res) => {
 router.post('/users', (req, res) => {
   const { airport, date, time } = req.body;
 
-  console.log(airport, date, time);
+  const airportName = airport.split(', ')[0];
 
-  res.status(200).send({
-    success: true
+  console.log(airportName, date, time);
+
+  const query = `SELECT * FROM users_details JOIN trip_details ON users_details.id = trip_details.user_id WHERE trip_details.airport = '${airportName}' AND trip_details.trip_date = '${date}'`;
+
+  connection.query(query, (error, results) => {
+    if (error) throw error;
+
+    res.status(200).send({
+      success: true,
+      users: results
+    });
   });
 });
 
