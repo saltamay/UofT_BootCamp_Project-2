@@ -15,7 +15,7 @@ router.get('/users', (req, res) => {
 });
 
 router.post('/users', (req, res) => {
-  if (req.body.hasOwnChild('airport')) {
+  if (Object.prototype.hasOwnProperty.call(req.body, 'airport')) {
     const { airport, date, time } = req.body;
 
     const airportName = airport.split(', ')[0];
@@ -72,6 +72,20 @@ router.post('/users', (req, res) => {
       }
     );
   }
+});
+
+router.delete('/users/:id', (req, res) => {
+  const { id } = req.params;
+
+  const query = `DELETE FROM users_details WHERE id = ${id}`;
+
+  connection.query(query, error => {
+    if (error) throw error;
+
+    res.status(200).send({
+      deleted: true
+    });
+  });
 });
 
 router.get('/airports', (req, res) => {
