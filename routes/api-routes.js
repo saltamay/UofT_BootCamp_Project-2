@@ -22,7 +22,7 @@ router.get('/users/:id', (req, res) => {
 
       res.status(200).send({
         success: true,
-        users: results
+        user: results
       });
     }
   );
@@ -113,6 +113,23 @@ router.get('/airports', (req, res) => {
       if (error) throw error;
 
       res.status(200).send(results);
+    }
+  );
+});
+
+router.post('/trips', (req, res) => {
+  const { userID, airport, date } = req.body;
+
+  connection.query(
+    'INSERT INTO trip_details (user_id, airport, trip_date) VALUES(?, ?, ?)',
+    [userID, airport, date],
+    (error, results) => {
+      if (error) throw error;
+
+      res.status(200).send({
+        success: true,
+        user: results
+      });
     }
   );
 });
