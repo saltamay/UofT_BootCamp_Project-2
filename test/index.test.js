@@ -181,6 +181,20 @@ describe('/trips/:userID', () => {
   });
 });
 
+describe('/trips/:id', () => {
+  describe('PUT', () => {
+    describe('Update a trip information', () => {
+      it('should return 200 status code along with the updated trip object', async () => {
+        const response = await request(app).get('/trips/1');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).updated, true);
+        expect(JSON.parse(response.text).trips).to.be.an('object');
+      });
+    });
+  });
+});
+
 // describe('/trips', () => {
 //   describe('POST', () => {
 //     describe('Successful trip creation', () => {
