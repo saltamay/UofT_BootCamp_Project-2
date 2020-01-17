@@ -167,24 +167,39 @@ describe('Airport name autocomplete', () => {
   });
 });
 
-describe('/trips', () => {
-  describe('POST', () => {
-    describe('Successful trip creation', () => {
+describe('/trips/:userID', () => {
+  describe('GET', () => {
+    describe('Get all trips of a user', () => {
       it('should return 200 status code', async () => {
-        const trip = {
-          userID: 2,
-          airport: 'Paris-Le Bourget Airport, Paris',
-          date: '2020-02-14'
-        };
-
-        const response = await request(app)
-          .post('/trips')
-          .type('form')
-          .send(trip);
+        const response = await request(app).get('/trips/1');
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).trips).to.be.an('array');
       });
     });
   });
 });
+
+// describe('/trips', () => {
+//   describe('POST', () => {
+//     describe('Successful trip creation', () => {
+//       it('should return 200 status code', async () => {
+//         const trip = {
+//           userID: 3,
+//           airport: 'London Gatwick Airport',
+//           date: '2020-02-14'
+//         };
+
+//         const response = await request(app)
+//           .post('/trips')
+//           .type('form')
+//           .send(trip);
+
+//         assert.equal(response.status, 200);
+//         assert.equal(JSON.parse(response.text).success, true);
+//         expect(JSON.parse(response.text).trip).to.be.an('object');
+//       });
+//     });
+//   });
+// });

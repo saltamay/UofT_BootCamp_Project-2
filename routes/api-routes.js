@@ -108,11 +108,26 @@ router.get('/airports', (req, res) => {
 
   connection.query(
     `SELECT * FROM airport_details WHERE name LIKE '%${query}%'`,
-    [query],
     (error, results) => {
       if (error) throw error;
 
       res.status(200).send(results);
+    }
+  );
+});
+
+router.get('/trips/:userID', (req, res) => {
+  const { userID } = req.params;
+
+  connection.query(
+    `SELECT * FROM trip_details WHERE user_id = ${userID}`,
+    (error, results) => {
+      if (error) throw error;
+
+      res.status(200).send({
+        success: true,
+        trips: results
+      });
     }
   );
 });
@@ -123,12 +138,12 @@ router.post('/trips', (req, res) => {
   connection.query(
     'INSERT INTO trip_details (user_id, airport, trip_date) VALUES(?, ?, ?)',
     [userID, airport, date],
-    (error, results) => {
+    error => {
       if (error) throw error;
 
       res.status(200).send({
         success: true,
-        user: results
+        trip: req.body
       });
     }
   );
