@@ -49,6 +49,79 @@ describe('the homepage page', () => {
 });
 
 describe('/users', () => {
+  describe('GET', () => {
+    describe('Get all users', () => {
+      it('should return 200 status code, along with users array', async () => {
+        const response = await request(app).get('/users');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).users).to.be.an('array');
+      });
+    });
+  });
+});
+
+describe('/users/:id', () => {
+  describe('GET', () => {
+    describe('Get a single user info', () => {
+      it('should return 200 status code, along with user object', async () => {
+        const response = await request(app).get('/users/1');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        assert.equal(JSON.parse(response.text).user.length, 1);
+        expect(JSON.parse(response.text).user).to.be.an('array');
+      });
+    });
+  });
+});
+
+describe('/users', () => {
+  describe('POST', () => {
+    describe('Create a user', () => {
+      it('should return 200 status code, along with user object created', async () => {
+        const user = {
+          firstName: 'Leana',
+          lastName: 'Chalker',
+          birthdate: '1990-06-15T04:00:00.000Z',
+          gender: 'Female',
+          email: 'johndoe@gmail.com',
+          relationshipStatus: 'Married',
+          height: 170,
+          hairColour: 'Green',
+          tagline: 'Test Tag Line',
+          bio: 'Meet me at airport',
+          imageUrl: 'Test Link'
+        };
+
+        const response = await request(app)
+          .post('/users')
+          .type('form')
+          .send(user);
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).user).to.be.an('object');
+      });
+    });
+  });
+});
+
+// describe('/users/:id', () => {
+//   describe('DELETE', () => {
+//     describe('Delete a single user', () => {
+//       it('should return 200 status code, along with deleted: true', async () => {
+//         const response = await request(app).delete('/users/10');
+
+//         assert.equal(response.status, 200);
+//         assert.equal(JSON.parse(response.text).deleted, true);
+//       });
+//     });
+//   });
+// });
+
+describe('/users', () => {
   describe('POST', () => {
     describe('valid search data', () => {
       it('should return 200 status code', async () => {
