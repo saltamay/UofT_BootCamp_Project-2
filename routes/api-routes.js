@@ -14,6 +14,20 @@ router.get('/users', (req, res) => {
   });
 });
 
+router.get('/users/:id', (req, res) => {
+  connection.query(
+    `SELECT * FROM users_details WHERE id = ${req.params.id}`,
+    (error, results) => {
+      if (error) throw error;
+
+      res.status(200).send({
+        success: true,
+        users: results
+      });
+    }
+  );
+});
+
 router.post('/users', (req, res) => {
   if (Object.prototype.hasOwnProperty.call(req.body, 'airport')) {
     const { airport, date, time } = req.body;
@@ -46,7 +60,8 @@ router.post('/users', (req, res) => {
       imageUrl
     } = req.body;
 
-    const query = 'INSERT INTO users_details (first_name, last_name, birthdate, email, relationship_status, height, hair_color, tagline, bio, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    const query = `INSERT INTO users_details
+      (first_name, last_name, birthdate, email, relationship_status, height, hair_color, tagline, bio, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
     connection.query(
       query,
