@@ -141,6 +141,24 @@ describe('/users', () => {
   });
 });
 
+describe('/users/:id', () => {
+  describe('PUT', () => {
+    describe('Update user information', () => {
+      it('should return 200 status code', async () => {
+        const updatedInfo = {
+          email: 'johndoe@outlook.com'
+        };
+        const response = await request(app)
+          .put('/users/1')
+          .send(updatedInfo);
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).updated, true);
+      });
+    });
+  });
+});
+
 describe('Airport name autocomplete', () => {
   describe('/airports?query=<input-query>', () => {
     it('should return a list of airports matching by names', async () => {

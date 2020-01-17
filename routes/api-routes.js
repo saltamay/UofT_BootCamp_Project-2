@@ -89,6 +89,39 @@ router.post('/users', (req, res) => {
   }
 });
 
+router.put('/users/:id', (req, res) => {
+  const { id } = req.params;
+  const updatedInfo = req.body;
+
+  let query = 'UPDATE users_details SET ';
+
+  Object.keys(updatedInfo).forEach(key => {
+    if (Object.prototype.hasOwnProperty.call(updatedInfo, key)) {
+      let value = updatedInfo[key];
+      // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+      if (typeof value === 'string' || value.indexOf(' ') >= 0) {
+        value = `'${value}'`;
+      }
+      query += `${key}=${value}`;
+    }
+  });
+
+  query += ` WHERE id=${id}`;
+  console.log(query);
+  connection.query(query, (error, results) => {
+    if (error) throw error;
+
+    if (results.affectedRows === 0) {
+      // If no rows were affected, then the ID must not exist, so 404
+      return res.status(404).end();
+    }
+    res.status(200).send({
+      updated: true
+    });
+    return true;
+  });
+});
+
 router.delete('/users/:id', (req, res) => {
   const { id } = req.params;
 
