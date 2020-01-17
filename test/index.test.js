@@ -184,12 +184,16 @@ describe('/trips/:userID', () => {
 describe('/trips/:id', () => {
   describe('PUT', () => {
     describe('Update a trip information', () => {
-      it('should return 200 status code along with the updated trip object', async () => {
-        const response = await request(app).get('/trips/1');
+      it('should return 200 status code', async () => {
+        const newTripInfo = {
+          airport: 'Pearson International Airport'
+        };
+        const response = await request(app)
+          .put('/trips/1')
+          .send(newTripInfo);
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).updated, true);
-        expect(JSON.parse(response.text).trips).to.be.an('object');
       });
     });
   });
