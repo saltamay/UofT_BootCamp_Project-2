@@ -1,4 +1,4 @@
-const { assert } = require('chai');
+const { assert, expect } = require('chai');
 const request = require('supertest');
 const jsdom = require('jsdom');
 
@@ -64,6 +64,32 @@ describe('/users', () => {
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
       });
+    });
+  });
+});
+
+describe('Airport name autocomplete', () => {
+  describe('/airports?query=<input-query>', () => {
+    it('should return a list of airports matching by names', async () => {
+      const query = 'pear';
+      const response = await request(app).get(`/airports?search=${query}`);
+
+      expect(JSON.parse(response.text)).to.be.an('array');
+      assert.equal(JSON.parse(response.text).length, 2);
+      JSON.parse(response.text).forEach(airport => {
+        assert.include(airport.name.toLowerCase(), query);
+      });
+    });
+
+    it('should include airports name and city', async () => {
+      const query = 'pearson';
+      const response = await request(app).get(`/airports?search=${query}`);
+
+      assert.equal(
+        JSON.parse(response.text)[0].name,
+        'Lester B. Pearson International Airport'
+      );
+      assert.equal(JSON.parse(response.text)[0].city, 'Toronto');
     });
   });
 });
