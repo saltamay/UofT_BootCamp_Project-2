@@ -239,3 +239,16 @@ describe('/trips/:id', () => {
 //     });
 //   });
 // });
+
+describe('/trips/:id', () => {
+  describe('DELETE', () => {
+    describe('Delete a trip', () => {
+      it('should return 200 status code, along with deleted: true', async () => {
+        const response = await request(app).delete('/trips/5');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).deleted, true);
+      });
+    });
+  });
+});

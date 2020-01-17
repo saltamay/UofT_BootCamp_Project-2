@@ -215,4 +215,18 @@ router.post('/trips', (req, res) => {
   );
 });
 
+router.delete('/trips/:id', (req, res) => {
+  const { id } = req.params;
+
+  const query = `DELETE FROM trip_details WHERE id = ${id}`;
+
+  connection.query(query, error => {
+    if (error) throw error;
+
+    res.status(200).send({
+      deleted: true
+    });
+  });
+});
+
 module.exports = router;
