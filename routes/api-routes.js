@@ -4,25 +4,25 @@ const connection = require('../config/connection');
 router.get('/', (req, res) => res.render('index'));
 
 router.get('/users', (req, res) => {
-  connection.query('SELECT * FROM users_details', (error, results) => {
+  connection.query('SELECT * FROM User', (error, results) => {
     if (error) throw error;
 
     res.status(200).send({
       success: true,
-      users: results
+      User: results
     });
   });
 });
 
 router.get('/users/:id', (req, res) => {
   connection.query(
-    `SELECT * FROM users_details WHERE id = ${req.params.id}`,
+    `SELECT * FROM User WHERE id = ${req.params.id}`,
     (error, results) => {
       if (error) throw error;
 
       res.status(200).send({
         success: true,
-        users: results
+        User: results
       });
     }
   );
@@ -30,20 +30,20 @@ router.get('/users/:id', (req, res) => {
 
 router.post('/users', (req, res) => {
   if (Object.prototype.hasOwnProperty.call(req.body, 'airport')) {
-    const { airport, date, time } = req.body;
+    const { airport, tripDate, timeSlot } = req.body;
 
     const airportName = airport.split(', ')[0];
 
-    console.log(airportName, date, time);
+    console.log(airportName, tripDate, timeSlot);
 
-    const query = `SELECT * FROM users_details JOIN trip_details ON users_details.id = trip_details.user_id WHERE trip_details.airport = '${airportName}' AND trip_details.trip_date = '${date}'`;
+    const query = `SELECT * FROM User JOIN Trip ON User.id = Trip.userId WHERE Trip.airport = '${airportName}' AND Trip.tripDate = '${tripDate}'`;
 
     connection.query(query, (error, results) => {
       if (error) throw error;
 
       res.status(200).send({
         success: true,
-        users: results
+        user: results
       });
     });
   } else {
@@ -51,6 +51,7 @@ router.post('/users', (req, res) => {
       firstName,
       lastName,
       birthDate,
+      gender,
       email,
       relationshipStatus,
       height,
@@ -60,8 +61,8 @@ router.post('/users', (req, res) => {
       imageUrl
     } = req.body;
 
-    const query = `INSERT INTO users_details
-      (first_name, last_name, birthdate, email, relationship_status, height, hair_color, tagline, bio, image_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    const query = `INSERT INTO User
+      (firstName, lastName, birthdate, gender, email, relationshipStatus, height, hairColor, tagline, bio, imageUrl) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
     connection.query(
       query,
@@ -69,6 +70,7 @@ router.post('/users', (req, res) => {
         firstName,
         lastName,
         birthDate,
+        gender,
         email,
         relationshipStatus,
         height,
@@ -92,7 +94,7 @@ router.post('/users', (req, res) => {
 router.delete('/users/:id', (req, res) => {
   const { id } = req.params;
 
-  const query = `DELETE FROM users_details WHERE id = ${id}`;
+  const query = `DELETE FROM User WHERE id = ${id}`;
 
   connection.query(query, error => {
     if (error) throw error;
@@ -107,7 +109,7 @@ router.get('/airports', (req, res) => {
   const query = req.query.search;
 
   connection.query(
-    `SELECT * FROM airport_details WHERE name LIKE '%${query}%'`,
+    `SELECT * FROM Airport WHERE airportName LIKE '%${query}%'`,
     [query],
     (error, results) => {
       if (error) throw error;

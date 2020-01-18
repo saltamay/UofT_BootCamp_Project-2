@@ -1,5 +1,17 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const dotenv = require('dotenv');
+
+// Load env vars
+dotenv.config({ path: './config/config.env' });
+
+const db = require('./database/database');
+
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
+  db.reset();
+  db.init();
+}
+
 const routes = require('./routes/api-routes');
 
 const PORT = process.env.PORT || 3000;
@@ -20,7 +32,9 @@ app.set('view engine', 'handlebars');
 app.use('/', routes);
 
 app.listen(PORT, () => {
-  console.log(`App now listening at localhost: + ${PORT}`);
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on PORT: ${PORT}`
+  );
 });
 
 module.exports = app;

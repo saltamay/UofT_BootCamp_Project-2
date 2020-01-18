@@ -52,14 +52,13 @@ describe('/users', () => {
   describe('POST', () => {
     describe('valid search data', () => {
       it('should return 200 status code', async () => {
-        const airport = 'YYZ';
-        const date = '2020-01-21?';
-        const time = [0, 1];
+        const airport = 'Pearson International Airport';
+        const tripDate = '2020-01-21?';
+        const timeSlot = [];
 
         const response = await request(app)
           .post('/users')
-          .type('form')
-          .send({ airport, date, time });
+          .send({ airport, tripDate, timeSlot });
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
@@ -68,25 +67,25 @@ describe('/users', () => {
   });
 });
 
-describe('Airport name autocomplete', () => {
+describe('Airport airportName autocomplete', () => {
   describe('/airports?query=<input-query>', () => {
-    it('should return a list of airports matching by names', async () => {
+    it('should return a list of Airport matching by airportNames', async () => {
       const query = 'pear';
       const response = await request(app).get(`/airports?search=${query}`);
 
       expect(JSON.parse(response.text)).to.be.an('array');
       assert.equal(JSON.parse(response.text).length, 2);
       JSON.parse(response.text).forEach(airport => {
-        assert.include(airport.name.toLowerCase(), query);
+        assert.include(airport.airportName.toLowerCase(), query);
       });
     });
 
-    it('should include airports name and city', async () => {
+    it('should include Airport airportName and city', async () => {
       const query = 'pearson';
       const response = await request(app).get(`/airports?search=${query}`);
 
       assert.equal(
-        JSON.parse(response.text)[0].name,
+        JSON.parse(response.text)[0].airportName,
         'Lester B. Pearson International Airport'
       );
       assert.equal(JSON.parse(response.text)[0].city, 'Toronto');
