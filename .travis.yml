@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - stable
 npm: true
+env:
+  - NODE_ENV=test
+  - NODE_ENV=production
 cache:
   directories:
     - node_modules
