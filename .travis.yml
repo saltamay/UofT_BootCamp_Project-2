@@ -4,7 +4,6 @@ node_js:
 npm: true
 env:
   - NODE_ENV=test
-  - NODE_ENV=production
 cache:
   directories:
     - node_modules
