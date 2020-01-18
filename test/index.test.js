@@ -49,6 +49,79 @@ describe('the homepage page', () => {
 });
 
 describe('/users', () => {
+  describe('GET', () => {
+    describe('Get all users', () => {
+      it('should return 200 status code, along with users array', async () => {
+        const response = await request(app).get('/users');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).users).to.be.an('array');
+      });
+    });
+  });
+});
+
+describe('/users/:id', () => {
+  describe('GET', () => {
+    describe('Get a single user info', () => {
+      it('should return 200 status code, along with user object', async () => {
+        const response = await request(app).get('/users/1');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        assert.equal(JSON.parse(response.text).user.length, 1);
+        expect(JSON.parse(response.text).user).to.be.an('array');
+      });
+    });
+  });
+});
+
+// describe('/users', () => {
+//   describe('POST', () => {
+//     describe('Create a user', () => {
+//       it('should return 200 status code, along with user object created', async () => {
+//         const user = {
+//           firstName: 'Leana',
+//           lastName: 'Chalker',
+//           birthdate: '1990-06-15T04:00:00.000Z',
+//           gender: 'Female',
+//           email: 'johndoe@gmail.com',
+//           relationshipStatus: 'Married',
+//           height: 170,
+//           hairColour: 'Green',
+//           tagline: 'Test Tag Line',
+//           bio: 'Meet me at airport',
+//           imageUrl: 'Test Link'
+//         };
+
+//         const response = await request(app)
+//           .post('/users')
+//           .type('form')
+//           .send(user);
+
+//         assert.equal(response.status, 200);
+//         assert.equal(JSON.parse(response.text).success, true);
+//         expect(JSON.parse(response.text).user).to.be.an('object');
+//       });
+//     });
+//   });
+// });
+
+// describe('/users/:id', () => {
+//   describe('DELETE', () => {
+//     describe('Delete a single user', () => {
+//       it('should return 200 status code, along with deleted: true', async () => {
+//         const response = await request(app).delete('/users/10');
+
+//         assert.equal(response.status, 200);
+//         assert.equal(JSON.parse(response.text).deleted, true);
+//       });
+//     });
+//   });
+// });
+
+describe('/users', () => {
   describe('POST', () => {
     describe('valid search data', () => {
       it('should return 200 status code', async () => {
@@ -63,6 +136,24 @@ describe('/users', () => {
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
+      });
+    });
+  });
+});
+
+describe('/users/:id', () => {
+  describe('PUT', () => {
+    describe('Update user information', () => {
+      it('should return 200 status code', async () => {
+        const updatedInfo = {
+          email: 'johndoe@outlook.com'
+        };
+        const response = await request(app)
+          .put('/users/1')
+          .send(updatedInfo);
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).updated, true);
       });
     });
   });
@@ -90,6 +181,74 @@ describe('Airport name autocomplete', () => {
         'Lester B. Pearson International Airport'
       );
       assert.equal(JSON.parse(response.text)[0].city, 'Toronto');
+    });
+  });
+});
+
+describe('/trips/:userID', () => {
+  describe('GET', () => {
+    describe('Get all trips of a user', () => {
+      it('should return 200 status code', async () => {
+        const response = await request(app).get('/trips/1');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).trips).to.be.an('array');
+      });
+    });
+  });
+});
+
+describe('/trips/:id', () => {
+  describe('PUT', () => {
+    describe('Update a trip information', () => {
+      it('should return 200 status code', async () => {
+        const newTripInfo = {
+          airport: 'Pearson International Airport'
+        };
+        const response = await request(app)
+          .put('/trips/1')
+          .send(newTripInfo);
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).updated, true);
+      });
+    });
+  });
+});
+
+// describe('/trips', () => {
+//   describe('POST', () => {
+//     describe('Successful trip creation', () => {
+//       it('should return 200 status code', async () => {
+//         const trip = {
+//           userID: 3,
+//           airport: 'London Gatwick Airport',
+//           date: '2020-02-14'
+//         };
+
+//         const response = await request(app)
+//           .post('/trips')
+//           .type('form')
+//           .send(trip);
+
+//         assert.equal(response.status, 200);
+//         assert.equal(JSON.parse(response.text).success, true);
+//         expect(JSON.parse(response.text).trip).to.be.an('object');
+//       });
+//     });
+//   });
+// });
+
+describe('/trips/:id', () => {
+  describe('DELETE', () => {
+    describe('Delete a trip', () => {
+      it('should return 200 status code, along with deleted: true', async () => {
+        const response = await request(app).delete('/trips/5');
+
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).deleted, true);
+      });
     });
   });
 });
