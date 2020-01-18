@@ -22,7 +22,6 @@
   "homepage": "https://github.com/saltamay/UofT_BootCamp_Project-2#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "jsdom": "^16.0.0",
@@ -33,6 +32,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "eslint": "^5.16.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql2": "^2.1.0",
