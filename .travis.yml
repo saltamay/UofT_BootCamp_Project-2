@@ -4,6 +4,8 @@ node_js:
 npm: true
 env:
   - NODE_ENV=test
+services:
+  - mysql
 cache:
   directories:
     - node_modules
