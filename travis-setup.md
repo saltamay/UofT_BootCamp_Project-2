@@ -4,7 +4,6 @@ Setting up the infrastructure for Continuous Integration (CI) takes some time bu
 
 Travis is a CI (Continuous) service which simply means it an automated process.
 
-
 Notice that CI tools like Travis are _not_ the same as software products like Gulp or SASS.
 
 In this activity we will
@@ -15,55 +14,53 @@ In this activity we will
 
 It is recommended that before you actually apply the test instructions to your project repo, that you _practice_ with a test repository first.
 
-
 A typical workflow with Travis, Github and Heroku goes like this:
 
-* A commit is pushed to GitHub
+- A commit is pushed to GitHub
 
-* Travis build is triggered and it checks if the test is passing or failing.
+- Travis build is triggered and it checks if the test is passing or failing.
 
-* If all tests pass, then Travis will proceed with pushing to Heroku.
+- If all tests pass, then Travis will proceed with pushing to Heroku.
 
 You will ultimately implement these steps to automate both building and unit testing processes.
 
 ## Instructions
 
-* It is recommended that all team members practice the techniques learned in this demo _in a test repo_, but for a team's project, only the owner of the project repo should complete this activity, other group members should observe and provide input where needed.
+- It is recommended that all team members practice the techniques learned in this demo _in a test repo_, but for a team's project, only the owner of the project repo should complete this activity, other group members should observe and provide input where needed.
 
 ### Creating a Repository and (Optional) Protecting Master
 
-* Before we can set up Travis, we can configure the project repo to protect the master branch.
+- Before we can set up Travis, we can configure the project repo to protect the master branch.
 
-* If you have not created a repo (for your project, or just to test this out) then create a project.
+- If you have not created a repo (for your project, or just to test this out) then create a project.
 
-* Create a dummy README.md or some test files.
+- Create a dummy README.md or some test files.
 
-* Push those test files to your remote copy of _master_
+- Push those test files to your remote copy of _master_
 
-* Navigate to the repo's page, then click the "Settings" tab.
+- Navigate to the repo's page, then click the "Settings" tab.
 
-* Select "Branches" from the left sidebar.
+- Select "Branches" from the left sidebar.
 
-* Under "Branch protection rules", click "Add Rule"
+- Under "Branch protection rules", click "Add Rule"
 
-* For "Branch name pattern" , choose "master". The page should display ""
+- For "Branch airportName pattern" , choose "master". The page should display ""
 
-* Check off the following options:
+- Check off the following options:
 
-  * "Protect this branch"
+  - "Protect this branch"
 
-  * "Require pull request reviews before merging"
+  - "Require pull request reviews before merging"
 
-  * "Include administrators"
+  - "Include administrators"
 
-  * "Require status checks to pass before merging"
+  - "Require status checks to pass before merging"
 
-  * "Require branches to be up to date before merging"
+  - "Require branches to be up to date before merging"
 
-* Click "Save changes"
+- Click "Save changes"
 
-
-*Note*: If you have protected the master branch, then you will have to approve merge requests before Travis takes over and automates from master.
+_Note_: If you have protected the master branch, then you will have to approve merge requests before Travis takes over and automates from master.
 
 ### Connect Your Github Repository to Heroku
 
@@ -100,20 +97,19 @@ console.log('server = ', server);
 module.exports = server;
 ```
 
-
 ### Associate Travis with your Github Repository
 
-* Navigate to <https://github.com/marketplace/travis-ci>.
+- Navigate to <https://github.com/marketplace/travis-ci>.
 
-* Select the option to "Set up a new plan" and choose the $0 "Open Source" plan when prompted.
+- Select the option to "Set up a new plan" and choose the \$0 "Open Source" plan when prompted.
 
-* Click "Install it for free" and then on the next page click "Complete order and begin installation".
+- Click "Install it for free" and then on the next page click "Complete order and begin installation".
 
-* On the next page select the radio button that reads "Only select repositories".
+- On the next page select the radio button that reads "Only select repositories".
 
-* From the "Select repositories" dropdown, choose your project repo.
+- From the "Select repositories" dropdown, choose your project repo.
 
-* Click the "Install" button to complete the process
+- Click the "Install" button to complete the process
 
 ### Part 3(b): Ensuring that your Github is connected to the Travis via the GitHub Plugin for Travis
 
@@ -141,14 +137,13 @@ The results should look similar to the image below.
 
 ![Screenshot_2019-05-12 -9.36.28-PM.png](images/Screenshot_2019-05-12%20-9.36.28-PM.png)
 
-
 Additional notes:
 
-Windows Users don't have Ruby installed natively. So these users have to install Ruby first and can do so via RubyInstaller, at
+Windows User don't have Ruby installed natively. So these User have to install Ruby first and can do so via RubyInstaller, at
 
 <https://rubyinstaller.org/>
 
-Mac Users should install Homebrew (it's a backup option, to update the operating system or Ruby), the package manager for OS X. The one-line instruction to install Homebrew can be found at
+Mac User should install Homebrew (it's a backup option, to update the operating system or Ruby), the package manager for OS X. The one-line instruction to install Homebrew can be found at
 
 <https://brew.sh/>
 
@@ -211,17 +206,14 @@ npm install -g eslint-plugin-import@^2.17.2
 
 You may need to add the location of the _ESlint executable_ that you installed using npm install (above) to the Windows OS PATH Environment Variable.
 
-
-
 ### Enabling Continuous Integration
 
 The .travis.yml file instructs Travis on what to build. the language option can be whatever language your app is running in and the "node_js": "stable" indicates Travis should use a stable version of node. You can also cache your node_modules directory on Travis to avoid installing all dependencies every time a build is triggered but rather it updates packages that has newer versions.
 
-
 Steps:
 
-1. Assuming you have a Travis Account, login through the terminal using ```travis login --org ``` entering your github username and password to identify yourself.
-2. Run ```travis init node_js .travis.yml --force -i -I --org```. This creates the .travis.yml file with Node JS as the main programming language
+1. Assuming you have a Travis Account, login through the terminal using `travis login --org` entering your github userairportName and password to identify yourself.
+2. Run `travis init node_js .travis.yml --force -i -I --org`. This creates the .travis.yml file with Node JS as the main programming language
 3. Open the _.travis.yml_ file and add the additional settings related to Node (add the yaml code at the end of the file, below the currently added lines)
 
 ```
@@ -231,7 +223,7 @@ cache:
   - node_modules
 ```
 
-as well, remove the following settings from ```node_js:``` versions
+as well, remove the following settings from `node_js:` versions
 
 ```
 - '6'
@@ -240,16 +232,13 @@ as well, remove the following settings from ```node_js:``` versions
 
 leaving only stable version.
 
+4. Setup Travis with Heroku using the travis CLI `travis setup heroku`
 
-4. Setup Travis with Heroku using the travis CLI ```travis setup heroku```
-
-When asked to Deploy only from _(your github account name) / (your repo name)_ enter _yes_
+When asked to Deploy only from _(your github account airportName) / (your repo airportName)_ enter _yes_
 
 when asked to _Encrypt API Key_ choose _yes_
 
 This should also update your _.travis.yml_ file
-
-
 
 Notes: You may get warnings that look like this:
 
@@ -266,7 +255,7 @@ Like Node and NPM they are just _warnings_. Your option to install them. On a ne
 6. Try to commit your changed with the following commands
 
 ```
-git add (name of file or .)
+git add (airportName of file or .)
 git commit -m "git message"
 git push
 ```
@@ -278,11 +267,6 @@ At this point, if the option was implemented to approve Merge / Pull Requests to
 Once the changes are committed to Master, The Travis WebHook / Plugin should take over and notify Travis that there are updated files and a new build needs to be created and served to Heroku.
 
 7. Observe the changes for your repository in your Travis Dashboard. Hopefully you will get a success Message!
-
-
-
-
-
 
 ## Miscellaneous Notes ( to add or remove)
 

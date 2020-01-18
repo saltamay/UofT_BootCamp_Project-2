@@ -50,12 +50,12 @@ const handleArraySelect = e => {
   airportInput.value = e.currentTarget.querySelector('.airport-info').innerText;
   airportList.innerHTML = '';
 };
-const displayMatches = airportsArray => {
+const displayMatches = AirportArray => {
   document.getElementById('suggestions').innerHTML = '';
-  airportsArray.forEach(airport => {
+  AirportArray.forEach(airport => {
     const li = document.createElement('li');
     li.classList.add('list-group-item', 'list-group-item-light');
-    li.innerHTML = `<span class="airport-info">${airport.name}, ${airport.city}</span>`;
+    li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
     li.onclick = event => handleArraySelect(event);
     document.getElementById('suggestions').appendChild(li);
   });
