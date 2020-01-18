@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
-    "test": "SET NODE_ENV=test& mocha --reporter spec --exit",
+    "test": "env NODE_ENV=test mocha --reporter spec --exit",
     "dev": "nodemon server.js",
-    "start": "SET NODE_ENV=production& node server.js",
+    "start": "env NODE_ENV=production node server.js",
     "lint": "eslint"
   },
   "repository": {
