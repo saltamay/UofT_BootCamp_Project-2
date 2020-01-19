@@ -1,18 +1,6 @@
 const router = require('express').Router();
-const connection = require('../config/connection');
+const { searchAirports } = require('../controllers/airports');
 
-router.get('/', (req, res) => {
-  const query = req.query.search;
-
-  connection.query(
-    `SELECT * FROM Airport WHERE airportName LIKE '%${query}%'`,
-    [query],
-    (error, results) => {
-      if (error) throw error;
-
-      res.status(200).send(results);
-    }
-  );
-});
+router.get('/', searchAirports);
 
 module.exports = router;
