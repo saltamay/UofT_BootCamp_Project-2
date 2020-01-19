@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const connection = require('../config/connection');
 
+var passport = require('passport');
+
+
 router.get('/', (req, res) => res.render('index'));
+
+router.get('/', (req, res) => res.render('login'));
 
 router.get('/users', (req, res) => {
   connection.query('SELECT * FROM users_details', (error, results) => {
@@ -227,6 +232,20 @@ router.delete('/trips/:id', (req, res) => {
       deleted: true
     });
   });
+});
+
+
+
+router.get('/login',
+  function(req, res){
+    res.render('login');
+  });
+
+router.post('/login', 
+passport.authenticate('local', { failureRedirect: '/login' }),
+function(req, res) {
+  console.log("Function ran");
+  res.redirect('/');
 });
 
 module.exports = router;
