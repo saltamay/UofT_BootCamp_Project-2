@@ -56,7 +56,7 @@ describe('/users', () => {
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
-        expect(JSON.parse(response.text).users).to.be.an('array');
+        expect(JSON.parse(response.text).data).to.be.an('array');
       });
     });
   });
@@ -70,8 +70,8 @@ describe('/users/:id', () => {
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
-        assert.equal(JSON.parse(response.text).user.length, 1);
-        expect(JSON.parse(response.text).user).to.be.an('array');
+        assert.equal(JSON.parse(response.text).data.length, 1);
+        expect(JSON.parse(response.text).data).to.be.an('array');
       });
     });
   });
@@ -97,12 +97,11 @@ describe('/users', () => {
 
         const response = await request(app)
           .post('/users')
-          .type('form')
           .send(user);
 
-        assert.equal(response.status, 200);
+        assert.equal(response.status, 201);
         assert.equal(JSON.parse(response.text).success, true);
-        expect(JSON.parse(response.text).user).to.be.an('object');
+        expect(JSON.parse(response.text).data).to.be.an('object');
       });
     });
   });
@@ -111,18 +110,18 @@ describe('/users', () => {
 describe('/users/:id', () => {
   describe('DELETE', () => {
     describe('Delete a single user', () => {
-      it('should return 200 status code, along with deleted: true', async () => {
-        const response = await request(app).delete('/users/10');
+      it('should return 200 status code, along with success: true', async () => {
+        const response = await request(app).delete('/users/9');
 
         assert.equal(response.status, 200);
-        assert.equal(JSON.parse(response.text).deleted, true);
+        assert.equal(JSON.parse(response.text).success, true);
       });
     });
   });
 });
 
 describe('/users', () => {
-  describe('POST', () => {
+  describe('GET', () => {
     describe('valid search data', () => {
       it('should return 200 status code', async () => {
         const airport = 'Pearson International Airport';
@@ -130,10 +129,11 @@ describe('/users', () => {
         const timeSlot = [];
 
         const response = await request(app)
-          .post('/users')
+          .get('/users')
           .send({ airport, tripDate, timeSlot });
 
         assert.equal(response.status, 200);
+        expect(JSON.parse(response.text).data).to.be.an('array');
         assert.equal(JSON.parse(response.text).success, true);
       });
     });
@@ -210,7 +210,6 @@ describe('/trips', () => {
 
         const response = await request(app)
           .post('/trips')
-          .type('form')
           .send(trip);
 
         assert.equal(response.status, 200);
