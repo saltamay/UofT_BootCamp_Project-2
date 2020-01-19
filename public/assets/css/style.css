@@ -25,3 +25,22 @@
 .selected {
   border: 1px solid #ff7001;
 }
+
+/* .index_body {
+
+  background: url(./assets/bg/map.jpg);
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .index_body {
+
+    background-image: url(./assets/bg/map.jpg);
+  }
+  } */
+
+  body{
+    padding: 0px;
+    margin: 0px;
+  }
