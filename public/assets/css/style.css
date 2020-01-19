@@ -25,3 +25,33 @@
 .selected {
   border: 1px solid #ff7001;
 }
+
+.form-container {
+  height: 100%;
+  color: #212529;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  /* padding: 15px; */
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.form-signin button {
+  border-color: #d46b4e;
+  background-color: #d46b4e;
+  opacity: 0.9;
+}
+
+.form-signin button:hover {
+  border-color: #d46b4e;
+  background-color: #d46b4e;
+  opacity: 1;
+}
