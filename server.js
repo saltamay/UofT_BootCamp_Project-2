@@ -1,10 +1,22 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-
 const passport = require('passport');
 const { Strategy } = require('passport-local');
+
+const dotenv = require('dotenv');
+
+// Load env vars
+dotenv.config({ path: './config/config.env' });
+
+const db = require('./database/database');
+
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
+  db.reset();
+  db.init();
+}
+
 const routes = require('./routes/api-routes');
-const db = require('./models/login');
+const dbLogin = require('./models/login');
 
 const PORT = process.env.PORT || 3000;
 
@@ -17,7 +29,7 @@ const PORT = process.env.PORT || 3000;
 passport.use(
   new Strategy((username, password, cb) => {
     console.log('start');
-    db.findByUsername(username, (err, user) => {
+    dbLogin.findByUsername(username, (err, user) => {
       if (err) {
         return cb(err);
       }
@@ -44,7 +56,7 @@ passport.serializeUser((user, cb) => {
 });
 
 passport.deserializeUser((id, cb) => {
-  db.login.findById(id, (err, user) => {
+  dbLogin.login.findById(id, (err, user) => {
     if (err) {
       return cb(err);
     }
@@ -73,7 +85,9 @@ app.set('view engine', 'handlebars');
 app.use('/', routes);
 
 app.listen(PORT, () => {
-  console.log(`App now listening at localhost: + ${PORT}`);
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on PORT: ${PORT}`
+  );
 });
 
 module.exports = app;
