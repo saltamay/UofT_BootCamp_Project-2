@@ -1,12 +1,10 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+
+const passport = require('passport');
+const { Strategy } = require('passport-local');
 const routes = require('./routes/api-routes');
-
-var passport = require('passport');
-var Strategy = require('passport-local').Strategy;
-var db = require('./models/login')
-
-
+const db = require('./models/login');
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,17 +14,23 @@ const PORT = process.env.PORT || 3000;
 // (`username` and `password`) submitted by the user.  The function must verify
 // that the password is correct and then invoke `cb` with a user object, which
 // will be set at `req.user` in route handlers after authentication.
-passport.use(new Strategy(
-  function(username, password, cb) {
-    console.log("start");
-    db.findByUsername(username, function(err, user) {
-      if (err) { return cb(err); }
-      if (!user) { return cb(null, false); }
-      if (user.password != password) { return cb(null, false); }
+passport.use(
+  new Strategy((username, password, cb) => {
+    console.log('start');
+    db.findByUsername(username, (err, user) => {
+      if (err) {
+        return cb(err);
+      }
+      if (!user) {
+        return cb(null, false);
+      }
+      if (user.password !== password) {
+        return cb(null, false);
+      }
       return cb(null, user);
     });
-  }));
-
+  })
+);
 
 // Configure Passport authenticated session persistence.
 //
@@ -35,14 +39,16 @@ passport.use(new Strategy(
 // typical implementation of this is as simple as supplying the user ID when
 // serializing, and querying the user record by ID from the database when
 // deserializing.
-passport.serializeUser(function(user, cb) {
+passport.serializeUser((user, cb) => {
   cb(null, user.id);
 });
 
-passport.deserializeUser(function(id, cb) {
-  db.login.findById(id, function (err, user) {
-    if (err) { return cb(err); }
-    cb(null, user);
+passport.deserializeUser((id, cb) => {
+  db.login.findById(id, (err, user) => {
+    if (err) {
+      return cb(err);
+    }
+    return cb(null, user);
   });
 });
 

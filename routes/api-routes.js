@@ -1,7 +1,6 @@
 const router = require('express').Router();
+const passport = require('passport');
 const connection = require('../config/connection');
-
-var passport = require('passport');
 
 
 router.get('/', (req, res) => res.render('index'));
@@ -235,17 +234,16 @@ router.delete('/trips/:id', (req, res) => {
 });
 
 
-
 router.get('/login',
-  function(req, res){
+  (req, res) => {
     res.render('login');
   });
 
-router.post('/login', 
-passport.authenticate('local', { failureRedirect: '/login' }),
-function(req, res) {
-  console.log("Function ran");
-  res.redirect('/');
-});
+router.post('/login',
+  passport.authenticate('local', { failureRedirect: '/login' }),
+  (req, res) => {
+    console.log('Function ran');
+    res.redirect('/');
+  });
 
 module.exports = router;

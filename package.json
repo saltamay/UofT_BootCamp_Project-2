@@ -8,7 +8,7 @@
     "test": "./node_modules/.bin/mocha --reporter spec --exit",
     "watch": "nodemon node server.js",
     "start": "node server.js",
-    "lint": "eslint"
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
