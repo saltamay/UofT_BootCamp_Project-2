@@ -192,7 +192,7 @@ describe('/trips/:id', () => {
           .send(newTripInfo);
 
         assert.equal(response.status, 200);
-        assert.equal(JSON.parse(response.text).updated, true);
+        assert.equal(JSON.parse(response.text).success, true);
       });
     });
   });
@@ -203,7 +203,7 @@ describe('/trips', () => {
     describe('Successful trip creation', () => {
       it('should return 200 status code', async () => {
         const trip = {
-          userID: 3,
+          userId: 3,
           airport: 'London Gatwick Airport',
           date: '2020-02-14'
         };
@@ -214,7 +214,7 @@ describe('/trips', () => {
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
-        expect(JSON.parse(response.text).trip).to.be.an('object');
+        expect(JSON.parse(response.text).data).to.be.an('object');
       });
     });
   });
@@ -227,7 +227,7 @@ describe('/trips/:id', () => {
         const response = await request(app).delete('/trips/5');
 
         assert.equal(response.status, 200);
-        assert.equal(JSON.parse(response.text).deleted, true);
+        assert.equal(JSON.parse(response.text).success, true);
       });
     });
   });
