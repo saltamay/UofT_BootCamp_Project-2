@@ -1,0 +1,130 @@
+    <div id="mainNav" class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light text-uppercase navbar-shrink">
+            <a class="navbar-brand d-md-none" href="#">AIRDATE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-bars"></span>
+            </button>
+
+            <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                        <i class="fa fa-home"></i> AIR DATE
+                        <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create Profile</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">My Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+<div class="container mt-5">
+  <form class="mt-5">
+    <h6 class="form-title mt-3">CREATE A PROFILE</h6>
+    <hr>
+    <div class="form-row mt-3">
+
+      <div class="col">
+        <Label>First Name : </Label>
+        <input id="firstName" type="text" class="form-control" placeholder="John">
+        <ul id="suggestions" class="list-group"></ul>
+      </div>
+
+      <div class="col">
+        <Label>Last Name : </Label>
+        <input id="lastName" type="text" class="form-control" placeholder="Doe">
+        <ul id="suggestions" class="list-group"></ul>
+      </div>
+
+    </div>
+
+    <div class="form-row mt-3">
+
+      <div class="col">
+        <Label>Email Address : </Label>
+        <br>
+            <input type="email" name="emailaddress"  class="form-control" >
+      </div>
+      
+      <div class="col">
+        <Label>Birthdate : </Label>
+        <input id="date" type="date" class="form-control" placeholder="Date">
+        <ul id="suggestions" class="list-group"></ul>
+
+       </div>
+    </div>
+
+    <div class="form-row mt-3">
+
+      <div class="col">
+        <Label>Gender : </Label>
+        <br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Prefer Not to Answer<br>
+      </div>
+
+      <div class="col">
+        <Label>Relationship Status : </Label>
+        <br>
+
+            <input type="radio" name="gender" value="male"> Single<br>
+            <input type="radio" name="gender" value="female"> Married<br>
+            <input type="radio" name="gender" value="other"> Prefer Not to Answer<br>
+            <ul id="suggestions" class="list-group"></ul>
+
+       </div>
+    </div>
+
+    <div class="form-row mt-3">
+
+      <div class="col">
+        <Label>Height in CM : </Label>
+        <br>
+            <input type="text" name="height"  class="form-control" >
+      </div>
+
+      <div class="col">
+        <Label>Hair Color : </Label>
+        <br>
+            <input type="text" name="hairColor"  class="form-control" >
+            <ul id="suggestions" class="list-group"></ul>
+       </div>
+    </div>
+    
+    <div class="form-row mt-3">
+
+        <Label>Insert Bio : </Label>
+            <input type="text" name="bio"  class="form-control" >
+    </div>
+
+    <div class="form-row mt-3">
+
+        <Label>Insert Tag Line : </Label>
+            <input type="text" name="tagline"  class="form-control" >
+    </div>
+    
+    <div class="form-row mt-3">
+
+        <Label>Profile Image URL : </Label>
+            <input type="text" name="image"  class="form-control" >
+    </div>
+
+    <div class="search-button">
+      <button type="submit" class="btn btn-lg mt-5 col-4">Create Profile</button>
+    </div>
+
+    </form>
+</div>
