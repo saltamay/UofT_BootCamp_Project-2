@@ -1,0 +1,51 @@
+
+<div class="container-fluid">
+  <div class="bg-info p-3">
+    <h3 class="text-center text-white">Boarding Pass</h3>
+  </div>
+  {{#each user}}
+    <div class="card mt-4">
+      <div class="card-header d-flex justify-content-between bg-white">
+        <div class="user-info">
+          <h4>{{ firstName }} {{ lastName }}</h4>
+          <h6>{{ tagline }}</h6>
+        </div>
+        <div class="upcoming-trip">
+          <div>Next Trip Info</div>
+        </div>
+      </div>
+      <img src="data:image/jpeg;base64,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" class="card-img-top" alt="User Profile Picture" style="width: 100%;">
+      <div class="card-body row align-items-center text-center">
+        <div class="col-6 gate">
+          <h1>Gate</h1>
+        </div>
+        <div class="col-6">
+          <div class="col-6 gender mt-4 mb-4">
+            <h1>{{ gender }}</h1>
+          </div>
+          <div class="col-6 age mt-4 mb-4">
+            <h1>Age</h1>
+          </div>
+        </div>
+      </div>
+      <div class="btn-toolbar mt-5 d-flex justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-4" role="group" aria-label="First group">
+          <button type="button" class="btn btn-info btn-lg p-4">
+            <span><i class="fas fa-thumbs-down"></i></span>
+          </button>
+        </div>
+        <div class="btn-group mr-4" role="group" aria-label="Second group">
+          <button type="button" class="btn btn-danger btn-lg p-4">
+            <span><i class="fas fa-heart"></i></span>
+          </button>
+        </div>
+      </div>
+      <h1 class="card-title bg-light mt-3 mb-3">About Me</h1>
+      <div class="card-body bg-primary text-white">
+        <p class="card-text">{{ bio }}</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
