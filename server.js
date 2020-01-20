@@ -15,8 +15,12 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
   db.init();
 }
 
-const routes = require('./routes/api-routes');
 const dbLogin = require('./models/login');
+
+// Route Files
+const users = require('./routes/users');
+const trips = require('./routes/trips');
+const airports = require('./routes/airports');
 
 const PORT = process.env.PORT || 3000;
 
@@ -82,7 +86,12 @@ app.use(express.json());
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-app.use('/', routes);
+// Mount routers
+app.use('/users', users);
+app.use('/trips', trips);
+app.use('/airports', airports);
+
+app.get('/', (req, res) => res.render('index'));
 
 app.listen(PORT, () => {
   console.log(
