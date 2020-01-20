@@ -21,6 +21,7 @@ const dbLogin = require('./models/login');
 const users = require('./routes/users');
 const trips = require('./routes/trips');
 const airports = require('./routes/airports');
+const login = require('./routes/login');
 
 const PORT = process.env.PORT || 3000;
 
@@ -90,6 +91,7 @@ app.set('view engine', 'handlebars');
 app.use('/users', users);
 app.use('/trips', trips);
 app.use('/airports', airports);
+app.use('/login', login);
 
 app.get('/', (req, res) => res.render('index'));
 
