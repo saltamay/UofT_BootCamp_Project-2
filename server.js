@@ -22,6 +22,7 @@ const users = require('./routes/users');
 const trips = require('./routes/trips');
 const airports = require('./routes/airports');
 const login = require('./routes/login');
+const create_profile = require('./routes/create_profile');
 
 const PORT = process.env.PORT || 3000;
 
@@ -91,6 +92,7 @@ app.use('/users', users);
 app.use('/trips', trips);
 app.use('/airports', airports);
 app.use('/login', login);
+app.use('/create_profile', create_profile)
 
 app.get('/', (req, res) => res.render('index'));
 
