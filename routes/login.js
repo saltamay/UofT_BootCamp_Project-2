@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.post(
-  '/login',
+  '/',
   passport.authenticate('local', { failureRedirect: '/login' }),
   (req, res) => {
     console.log('Function ran');
