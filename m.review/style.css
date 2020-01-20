@@ -1,0 +1,38 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn{
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: sans-serif;
+}
+
+.btn-xl{
+    padding: 1rem 2 rem;
+}
+.btn-primary {
+    background-color: #f05f44;
+    border-color:#f05f44;
+
+}
+.p{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+
+#header {
+    height: 100px;
+    margin-top: 15px;
+    background-color:rgb(60, 81, 197);
+    background-image: url("img/air.jpg");
+
+}
+#content{
+    height:85%;
+    width: 100%;
+    float: center;
+    margin-top: 8px;
+    background-image: url("img/NEWS.jpeg");
+    border-radius: 4px;
+}

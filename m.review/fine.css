@@ -1,0 +1,22 @@
+header{
+    height: 89%;
+    width: 100%;
+background-image: url("img/hhh.png");
+
+
+}
+input{
+    width: 100%;
+}
+textarea{
+    height: 100px;
+    width: 100%
+}
+form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-image: url("img/passenger-airplanes-11.jpg");
+}

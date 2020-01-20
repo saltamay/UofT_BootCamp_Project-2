@@ -1,0 +1,62 @@
+div{
+    border: 1px solid rgb(143, 140, 140);
+}
+
+body{
+    direction: rtl;
+}
+#parent{
+    width: 960px;
+    margin: auto;
+    border: none;
+}
+#header {
+    height: 100px;
+    margin-top: 15px;
+    background-color:rgb(188, 174, 189);
+    background-image: url("50s.jpg");
+
+}
+
+#subheader {
+    height: 70px;
+    margin-top: 8px;
+    background-color: blanchedalmond;
+    border: none
+
+}
+#sidebar{
+    height: 400px;
+    width: 29.5%;
+    float: right;
+    margin-top: 8px;
+    margin-left: 8px;
+    border: none; 
+}
+
+#content{
+    height: 400px;
+    width: 69.2%;
+    float: right;
+    margin-top: 8px;
+    background-image: url("back.jpg");
+    border: none
+}
+
+#footer{
+    width: 99.7%;
+    height: 150px;
+    float: right;
+    margin-top: 8px;
+    margin-bottom: 15px;
+   background-color: rgb(223, 216, 158);
+   border:none
+   }
+.subfooter{
+    height: 153px;
+    width: 32.4%;
+    float: right;
+    margin-left: 8px; 
+    background-color: rgb(175, 148, 108);
+    border:none
+}
