@@ -30,7 +30,7 @@
         </nav>
     </div>
 
-<div class="container mt-5">
+<div id="signup" class="container mt-5">
   <form class="mt-5">
     <h6 class="form-title mt-3">CREATE A PROFILE</h6>
     <hr>
@@ -55,12 +55,12 @@
       <div class="col">
         <Label>Email Address : </Label>
         <br>
-            <input type="email" name="emailaddress"  class="form-control" >
+            <input id="email" type="email" name="emailaddress"  class="form-control" >
       </div>
       
       <div class="col">
         <Label>Birthdate : </Label>
-        <input id="date" type="date" class="form-control" placeholder="Date">
+        <input id="birthdate" type="date" class="form-control" placeholder="Date">
         <ul id="suggestions" class="list-group"></ul>
 
        </div>
@@ -80,9 +80,9 @@
         <Label>Relationship Status : </Label>
         <br>
 
-            <input type="radio" name="gender" value="male"> Single<br>
-            <input type="radio" name="gender" value="female"> Married<br>
-            <input type="radio" name="gender" value="other"> Prefer Not to Answer<br>
+            <input type="radio" name="relationship" value="male"> Single<br>
+            <input type="radio" name="relationship" value="female"> Married<br>
+            <input type="radio" name="relationship" value="other"> Prefer Not to Answer<br>
             <ul id="suggestions" class="list-group"></ul>
 
        </div>
@@ -93,13 +93,13 @@
       <div class="col">
         <Label>Height in CM : </Label>
         <br>
-            <input type="text" name="height"  class="form-control" >
+            <input id="height" type="text" name="height" class="form-control" >
       </div>
 
       <div class="col">
         <Label>Hair Color : </Label>
         <br>
-            <input type="text" name="hairColor"  class="form-control" >
+            <input id="hairColor" type="text" name="hairColor" class="form-control" >
             <ul id="suggestions" class="list-group"></ul>
        </div>
     </div>
@@ -107,7 +107,7 @@
     <div class="form-row mt-3">
 
         <Label>Insert Bio : </Label>
-            <input type="text" name="bio"  class="form-control" >
+            <input id="bio" type="text" name="bio" class="form-control" >
     </div>
 
     <div class="form-row mt-3">
@@ -119,10 +119,10 @@
     <div class="form-row mt-3">
 
         <Label>Profile Image URL : </Label>
-            <input type="text" name="image"  class="form-control" >
+            <input id="imageUrl" type="text" name="image" class="form-control" >
     </div>
 
-    <div class="search-button">
+    <div class="signup-button">
       <button type="submit" class="btn btn-lg mt-5 col-4">Create Profile</button>
     </div>
 
