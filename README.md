@@ -1,1 +1,86 @@
-# UofT_BootCamp_Project-2
+# **UofT_BootCamp_Project-2**
+
+# **AIR DATE**
+
+Meet people at the Airport during your layover.
+
+![LOGO](/screenshots/.png)
+
+## Repository 
+
+Click the link below to check the repository :
+
+[GitHub URL](https://github.com/saltamay/UofT_BootCamp_Project-2)
+
+## Heroku
+
+The application is deployed on HEROKU. Click below to checkout 
+
+[Go to Heroku Link](https://uoft-project2.herokuapp.com/)
+
+## TRAVIS 
+
+The continuous Integration / continuous Deliver model is build using Travis. Click below to checkout 
+
+[Go to Travis Link](https://travis-ci.org/saltamay/UofT_BootCamp_Project-2)
+
+## Requirements
+
+For running on your system, you will need Node.js and node global package, and also the following dependency packages installed in your environement.  
+
+### Node
+
+ Just go on [official Node.js website](https://nodejs.org/) and download the installer.
+
+Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).  
+
+To check if its already installed just type the following commands to verify :
+
+```bash
+node --version
+v12.6.0
+
+git --version
+git version 2.21.0 (Apple Git-122)
+
+npm --version
+6.13.1
+```
+
+### NPM Packages
+
+- EXPRESS 
+- EXPRESS-HANDLEBARS 
+- MYSQL 
+- SEQUELIZE
+- DOTENV
+- PASSPORT
+- PASSPORT-LOVAL
+
+### NPM Development Packages
+
+### Database Instance
+
+The database for Air Date is running on a Heroku using [JAWS DB](https://www.jawsdb.com/). 
+
+## Folder Structure
+
+
+## Running the Application
+
+Run the following commands in your terminal window 
+
+```bash
+git clone https://github.com/saltamay/UofT_BootCamp_Project-2.git
+
+cd UofT_BootCamp_Project-2
+
+npm install
+```
+
+All packages will be installed and now run the application with the command below : 
+
+```bash
+node server.js
+npm start
+```
