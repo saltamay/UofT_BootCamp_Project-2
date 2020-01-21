@@ -13,6 +13,8 @@ router.get('/', getAllUsers);
 
 router.get('/:id', getSingleUser);
 
+router.get('/:id/dashboard', getSingleUser);
+
 router.get('/search', searchUsers);
 
 router.post('/', createUser);
