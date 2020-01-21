@@ -10,21 +10,22 @@
 
 #suggestions .list-group-item:hover {
   color: #fff;
-  background-color: #ff7001;
+  background-color: #d46b4e;
   opacity: 0.8;
   cursor: pointer;
 }
 
 .search-button button,
-.signup-button button {
+.signup-button button,
+.addtrip-button button {
   color: #fff !important;
-  background-color: #ff7001 !important;
+  background-color: #d46b4e !important;
 
   padding: 1rem 2rem !important;
 }
 
 .selected {
-  border: 1px solid #ff7001;
+  border: 1px solid #d46b4e;
 }
 
 .form-container {
