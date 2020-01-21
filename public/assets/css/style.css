@@ -15,7 +15,8 @@
   cursor: pointer;
 }
 
-.search-button button {
+.search-button button,
+.signup-button button {
   color: #fff !important;
   background-color: #ff7001 !important;
 
