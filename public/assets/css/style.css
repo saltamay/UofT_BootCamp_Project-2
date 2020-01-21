@@ -3,6 +3,10 @@
   padding: 2.75rem 0 !important;
 }
 
+.list-group-horizontal .list-group-item:hover {
+  cursor: pointer;
+}
+
 #suggestions {
   position: absolute;
   z-index: 10;

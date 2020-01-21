@@ -6,7 +6,7 @@ const connection = require('../config/connection');
  * @access Private
  */
 
-const addTripPage = (req, res) => {
+const renderAddTripPage = (req, res) => {
   return res.render('add-trip');
 };
 
@@ -80,11 +80,11 @@ const updateTrip = (req, res) => {
  * @access Private
  */
 const createTrip = (req, res) => {
-  const { userId, airport, date } = req.body;
+  const { userId, airport, date, timeSlot } = req.body;
 
   connection.query(
-    'INSERT INTO Trip (userId, airport, tripDate) VALUES(?, ?, ?)',
-    [userId, airport, date],
+    'INSERT INTO Trip (userId, airport, tripDate, timeSlot) VALUES(?, ?, ?, ?)',
+    [userId, airport, date, timeSlot],
     (error, results) => {
       if (error) {
         return res.status(400).json({
@@ -125,7 +125,7 @@ const deleteTrip = (req, res) => {
 };
 
 module.exports = {
-  addTripPage,
+  renderAddTripPage,
   getUserTrips,
   createTrip,
   updateTrip,

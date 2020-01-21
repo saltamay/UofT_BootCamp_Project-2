@@ -1,14 +1,14 @@
 const router = require('express').Router();
 
 const {
-  addTripPage,
+  renderAddTripPage,
   getUserTrips,
   updateTrip,
   createTrip,
   deleteTrip
 } = require('../controllers/trips.js');
 
-router.get('/', addTripPage);
+router.get('/', renderAddTripPage);
 
 router.get('/:userId', getUserTrips);
 

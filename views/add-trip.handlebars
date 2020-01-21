@@ -1,20 +1,20 @@
 {{> nav }}
-<div id="signup" class="container mt-5">
+<div id="add-trip" class="container mt-5">
   <form class="mt-5">
     <h6 class="form-title mt-3">ADD A TRIP</h6>
     <hr>
     <div class="form-row mt-3">
 
-      <div class="col">
+      <div class="col-6">
         <Label>USER ID : </Label>
-        <input id="userId" type="text" class="form-control" placeholder="John">
-        <ul id="suggestions" class="list-group"></ul>
+        <input id="userId" type="text" class="form-control" placeholder="ID">
+        {{!-- <ul id="suggestions" class="list-group"></ul> --}}
       </div>
 
-      <div class="col">
-        <Label>AIRPORT NAME : </Label>
-        <input id="airportName" type="text" class="form-control" placeholder="Doe">
-        <ul id="suggestions" class="list-group"></ul>
+      <div class="col-6">
+        <Label>USERNAME : </Label>
+        <input id="username" type="text" class="form-control" placeholder="Username">
+        {{!-- <ul id="suggestions" class="list-group"></ul> --}}
       </div>
 
     </div>
@@ -22,21 +22,43 @@
     <div class="form-row mt-3">
 
       <div class="col">
+        <Label>AIRPORT NAME : </Label>
+        <input id="airportName" type="text" class="form-control" placeholder="Airport Name">
+        <ul id="suggestions" class="list-group"></ul>
+      </div>
+
+      {{!-- <div class="col">
         <Label>TIME SLOT : </Label>
         <br>
             <input id="email" type="email" name="emailaddress"  class="form-control" >
-      </div>
+      </div> --}}
       
       <div class="col">
         <Label>DATE : </Label>
-        <input id="birthdate" type="date" class="form-control" placeholder="Date">
-        <ul id="suggestions" class="list-group"></ul>
+        <input id="date" type="date" class="form-control" placeholder="Date">
+        {{!-- <ul id="suggestions" class="list-group"></ul> --}}
 
        </div>
     </div>
 
+    <h6 class="form-title mt-5">PICK A TIME SLOT</h6>
+    <ul class="time-slots list-group list-group-horizontal text-center mt-3 d-flex justify-content-between">
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="0">11AM - 12PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="1">12PM - 1PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="2">1PM - 2PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="3">3PM - 4PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="4">4PM - 5PM</li>
+    </ul>
+    <ul class="time-slots list-group list-group-horizontal text-center mt-3 d-flex justify-content-between">
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="5">5PM - 6PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="6">7PM - 8PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="7">8PM - 9PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="8">9PM - 10PM</li>
+      <li class="col-2 list-group-item list-group-item-light" data-time-slot="9">10PM - 11PM</li>
+    </ul>
+
     <div class="addtrip-button">
-      <button type="submit" class="btn btn-lg mt-5 col-4">Add Trip</button>
+      <button type="submit" class="btn btn-lg mt-5 col-3 offset-9">Add Trip</button>
     </div>
 
     </form>
