@@ -1,0 +1,20 @@
+{{> nav }}
+
+<div class="container-fluid">
+    {{#each user}}
+
+        <div class="row">
+            <div class="col-5">
+                <h1  class="card-title">Hello, {{ firstName }} {{ lastName }}</h1>
+                <div class="card-body">
+                    <p class="card-text">{{ tagline }}</p class="card-text">
+                    <p class="card-text"{{ bio }}</p>
+                    <p class="card-text">{{ birthdate }}</p>
+                    <p class="card-text">{{ relationshipStatus }}</p>
+                </div>
+                
+            </div>
+        </div>
+    {{/each}}
+</div>
+
