@@ -13,9 +13,9 @@ router.get('/', getAllUsers);
 
 router.get('/:id', getSingleUser);
 
-router.get('/:id/dashboard', getSingleUser);
+router.post('/search', searchUsers);
 
-router.get('/search', searchUsers);
+router.get('/:id/dashboard', getSingleUser);
 
 router.post('/', createUser);
 

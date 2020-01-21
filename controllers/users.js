@@ -55,26 +55,47 @@ const getSingleUser = (req, res) => {
  * @route GET /users/search
  * @access Private
  */
-const searchUsers = (req, res) => {
-  if (Object.prototype.hasOwnProperty.call(req.body, 'airport')) {
-    const { airport, tripDate, timeSlot } = req.body;
+const searchUsers = async (req, res) => {
+  if (Object.prototype.hasOwnProperty.call(req.body, 'airportName')) {
+    const { airportName, tripDate, timeSlot } = req.body;
 
-    const airportName = airport.split(', ')[0];
+    const airport = airportName.split(', ')[0];
 
-    console.log(airportName, tripDate, timeSlot);
+    console.log(airport, tripDate, timeSlot);
 
-    const query = `SELECT * FROM User JOIN Trip ON User.id = Trip.userId WHERE Trip.airport = '${airportName}' AND Trip.tripDate = '${tripDate}'`;
+    let users = [];
+    const cache = {};
 
-    connection.query(query, (error, results) => {
-      if (error) {
-        return res.status(400).json({
-          success: false
+    timeSlot.split(',').forEach(async (time, i) => {
+      const query = `SELECT * FROM User JOIN Trip ON User.id = Trip.userId WHERE Trip.airport = '${airport}' AND Trip.tripDate = '${tripDate}' AND Trip.timeSlot LIKE '%${time}%'`;
+
+      let results = new Promise((resolve, reject) => {
+        connection.query(query, (error, result) => {
+          if (error) {
+            res.status(400).json({
+              success: false
+            });
+            reject(error);
+          }
+          resolve(result);
+        });
+      });
+
+      results = await results;
+      users = [...users, ...results];
+
+      if (i === timeSlot.split(',').length - 1) {
+        users = users.filter(user => {
+          if (!cache[user.userId]) {
+            cache[user.userId] = user;
+            return cache[user.userId];
+          }
+        });
+        res.status(200).json({
+          success: true,
+          data: users
         });
       }
-      return res.status(200).json({
-        success: true,
-        data: results
-      });
     });
   }
 };
