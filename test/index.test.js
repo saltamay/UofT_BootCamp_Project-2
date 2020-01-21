@@ -56,7 +56,7 @@ describe('/users', () => {
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
-        expect(JSON.parse(response.text).users).to.be.an('array');
+        expect(JSON.parse(response.text).data).to.be.an('array');
       });
     });
   });
@@ -70,68 +70,48 @@ describe('/users/:id', () => {
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
-        assert.equal(JSON.parse(response.text).user.length, 1);
-        expect(JSON.parse(response.text).user).to.be.an('array');
+        assert.equal(JSON.parse(response.text).data.length, 1);
+        expect(JSON.parse(response.text).data).to.be.an('array');
       });
     });
   });
 });
 
-// describe('/users', () => {
-//   describe('POST', () => {
-//     describe('Create a user', () => {
-//       it('should return 200 status code, along with user object created', async () => {
-//         const user = {
-//           firstName: 'Leana',
-//           lastName: 'Chalker',
-//           birthdate: '1990-06-15T04:00:00.000Z',
-//           gender: 'Female',
-//           email: 'johndoe@gmail.com',
-//           relationshipStatus: 'Married',
-//           height: 170,
-//           hairColour: 'Green',
-//           tagline: 'Test Tag Line',
-//           bio: 'Meet me at airport',
-//           imageUrl: 'Test Link'
-//         };
-
-//         const response = await request(app)
-//           .post('/users')
-//           .type('form')
-//           .send(user);
-
-//         assert.equal(response.status, 200);
-//         assert.equal(JSON.parse(response.text).success, true);
-//         expect(JSON.parse(response.text).user).to.be.an('object');
-//       });
-//     });
-//   });
-// });
-
-// describe('/users/:id', () => {
-//   describe('DELETE', () => {
-//     describe('Delete a single user', () => {
-//       it('should return 200 status code, along with deleted: true', async () => {
-//         const response = await request(app).delete('/users/10');
-
-//         assert.equal(response.status, 200);
-//         assert.equal(JSON.parse(response.text).deleted, true);
-//       });
-//     });
-//   });
-// });
-
 describe('/users', () => {
   describe('POST', () => {
-    describe('valid search data', () => {
-      it('should return 200 status code', async () => {
-        const airport = 'Pearson International Airport';
-        const tripDate = '2020-01-21?';
-        const timeSlot = [];
+    describe('Create a user', () => {
+      it('should return 200 status code, along with user object created', async () => {
+        const user = {
+          firstName: 'Leana',
+          lastName: 'Chalker',
+          birthdate: '1990-06-15T04:00:00.000Z',
+          gender: 'Female',
+          email: 'johndoe@gmail.com',
+          relationshipStatus: 'Married',
+          height: 170,
+          hairColour: 'Green',
+          tagline: 'Test Tag Line',
+          bio: 'Meet me at airport',
+          imageUrl: 'Test Link'
+        };
 
         const response = await request(app)
           .post('/users')
-          .send({ airport, tripDate, timeSlot });
+          .send(user);
+
+        assert.equal(response.status, 201);
+        assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).data).to.be.an('object');
+      });
+    });
+  });
+});
+
+describe('/users/:id', () => {
+  describe('DELETE', () => {
+    describe('Delete a single user', () => {
+      it('should return 200 status code, along with success: true', async () => {
+        const response = await request(app).delete('/users/9');
 
         assert.equal(response.status, 200);
         assert.equal(JSON.parse(response.text).success, true);
@@ -140,6 +120,25 @@ describe('/users', () => {
   });
 });
 
+describe('/users', () => {
+  describe('GET', () => {
+    describe('valid search data', () => {
+      it('should return 200 status code', async () => {
+        const airport = 'Pearson International Airport';
+        const tripDate = '2020-01-21?';
+        const timeSlot = [];
+
+        const response = await request(app)
+          .get('/users')
+          .send({ airport, tripDate, timeSlot });
+
+        assert.equal(response.status, 200);
+        expect(JSON.parse(response.text).data).to.be.an('array');
+        assert.equal(JSON.parse(response.text).success, true);
+      });
+    });
+  });
+});
 
 describe('Airport airportName autocomplete', () => {
   describe('/airports?query=<input-query>', () => {
@@ -193,34 +192,33 @@ describe('/trips/:id', () => {
           .send(newTripInfo);
 
         assert.equal(response.status, 200);
-        assert.equal(JSON.parse(response.text).updated, true);
+        assert.equal(JSON.parse(response.text).success, true);
       });
     });
   });
 });
 
-// describe('/trips', () => {
-//   describe('POST', () => {
-//     describe('Successful trip creation', () => {
-//       it('should return 200 status code', async () => {
-//         const trip = {
-//           userID: 3,
-//           airport: 'London Gatwick Airport',
-//           date: '2020-02-14'
-//         };
+describe('/trips', () => {
+  describe('POST', () => {
+    describe('Successful trip creation', () => {
+      it('should return 200 status code', async () => {
+        const trip = {
+          userId: 3,
+          airport: 'London Gatwick Airport',
+          date: '2020-02-14'
+        };
 
-//         const response = await request(app)
-//           .post('/trips')
-//           .type('form')
-//           .send(trip);
+        const response = await request(app)
+          .post('/trips')
+          .send(trip);
 
-//         assert.equal(response.status, 200);
-//         assert.equal(JSON.parse(response.text).success, true);
-//         expect(JSON.parse(response.text).trip).to.be.an('object');
-//       });
-//     });
-//   });
-// });
+        assert.equal(response.status, 200);
+        assert.equal(JSON.parse(response.text).success, true);
+        expect(JSON.parse(response.text).data).to.be.an('object');
+      });
+    });
+  });
+});
 
 describe('/trips/:id', () => {
   describe('DELETE', () => {
@@ -229,7 +227,7 @@ describe('/trips/:id', () => {
         const response = await request(app).delete('/trips/5');
 
         assert.equal(response.status, 200);
-        assert.equal(JSON.parse(response.text).deleted, true);
+        assert.equal(JSON.parse(response.text).success, true);
       });
     });
   });
