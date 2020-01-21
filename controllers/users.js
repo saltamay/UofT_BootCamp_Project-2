@@ -41,6 +41,10 @@ const getSingleUser = (req, res) => {
         user: result
       };
       console.log(hbsObject);
+      if (req.url.includes('dashboard')) {
+        return res.render('dashboard', hbsObject);
+      }
+
       return res.render('view-profile', hbsObject);
     }
   );
