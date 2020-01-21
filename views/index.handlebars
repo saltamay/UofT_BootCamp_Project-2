@@ -1,4 +1,4 @@
-<div class="container mt-5">
+{{!-- <div class="container mt-5">
   <form class="mt-5">
     <h6 class="form-title mt-3">PICK A LOCATION AND DATE</h6>
     <div class="form-row mt-3">
@@ -42,4 +42,65 @@
       <button type="submit" class="btn btn-lg mt-5 col-2 offset-10">Search</button>
     </div>
     </form>
-</div>
+</div> --}}
+
+    <div class="container col">
+        <div class="col align-self-start" style="padding-left: 35px;">
+            <form class="mt-5">
+
+                <h6   class="form-title mt-3">Layover Airport</h6>
+
+            <div class="form-row mt-3">
+
+                <div class="col-lg-5">
+                    <div>
+                        <input id="airport" type="text" class="form-control" placeholder="Airport">
+                        <ul id="suggestions" class="list-group"></ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Date of Layover -->
+            <h6   class="form-title mt-3">Date of Layover</h6>
+            <div class="form-row mt-3">
+                <div class="col" >
+                    <input style="width: 180px;" id="date" type="date" class="form-control" placeholder="Date">
+                </div>
+    
+            </div>
+
+            <!-- Times of Layover -->
+            <div>
+                <div class="form-row mt-1">
+
+                    <div  class="form-row mt-3">
+                        <span style="padding-left: 10px;">
+                            <h6   class="form-title mt-3">Start </h6>
+                        </span>
+                        <span style="padding-left: 20px;">
+                            <h6   class="form-title mt-3">Boarding</h6>
+                        </span>
+                    </div>
+                </div>
+
+                <div  class="form-row mt-3">
+
+                    <div class="col-sm-1.5">
+                        <input id="time" type="time" class="form-control" placeholder="arrival time">
+                    </div>
+
+                    <div class="col-sm-1.5">
+                        <input id="time" type="time" class="form-control" placeholder="departure time">
+                    </div>
+
+                </div>
+
+            </div>
+
+          </div>
+
+        </form>
+        </div>
+        
+    </div >
