@@ -33,10 +33,15 @@ const getSingleUser = (req, res) => {
           success: false
         });
       }
-      return res.status(200).send({
-        success: true,
-        data: result
-      });
+      // return res.status(200).send({
+      //   success: true,
+      //   data: result
+      // });
+      const hbsObject = {
+        user: result
+      };
+      console.log(hbsObject);
+      return res.render('view-profile', hbsObject);
     }
   );
 };
