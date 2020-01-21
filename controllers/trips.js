@@ -80,11 +80,13 @@ const updateTrip = (req, res) => {
  * @access Private
  */
 const createTrip = (req, res) => {
-  const { userId, airport, date, timeSlot } = req.body;
+  const { userId, airportName, tripDate, timeSlot } = req.body;
+
+  const airport = airportName.split(', ')[0];
 
   connection.query(
     'INSERT INTO Trip (userId, airport, tripDate, timeSlot) VALUES(?, ?, ?, ?)',
-    [userId, airport, date, timeSlot],
+    [userId, airport, tripDate, timeSlot],
     (error, results) => {
       if (error) {
         return res.status(400).json({

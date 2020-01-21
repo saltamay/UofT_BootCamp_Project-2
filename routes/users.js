@@ -13,7 +13,7 @@ router.get('/', getAllUsers);
 
 router.get('/:id', getSingleUser);
 
-router.get('/search', searchUsers);
+router.post('/search', searchUsers);
 
 router.post('/', createUser);
 

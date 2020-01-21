@@ -48,14 +48,14 @@ document.querySelectorAll('.time-slots .list-group-item').forEach(listItem => {
 
 // Get trip info
 const getTripInfo = () => {
-  const airport = document.getElementById('airportName').value;
-  const date = document.getElementById('date').value;
+  const airportName = document.getElementById('airportName').value;
+  const tripDate = document.getElementById('date').value;
   let timeSlot = [];
   document.querySelectorAll('.selected').forEach(selectedTime => {
     timeSlot.push(selectedTime.dataset.timeSlot);
   });
   timeSlot = timeSlot.toString();
-  const data = { airport, date, timeSlot };
+  const data = { airportName, tripDate, timeSlot };
   return data;
 };
 
@@ -78,7 +78,7 @@ if (document.querySelector('#index')) {
       console.log(data);
 
       try {
-        const response = await fetch('/users', {
+        const response = await fetch('/users/search', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
