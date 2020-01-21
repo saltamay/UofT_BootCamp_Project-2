@@ -6,9 +6,7 @@ const connection = require('../config/connection');
  * @access Private
  */
 
-const renderAddTripPage = (req, res) => {
-  return res.render('add-trip');
-};
+const renderAddTripPage = (req, res) => res.render('add-trip');
 
 /**
  * @description Get all upcoming trips of a user
@@ -80,7 +78,9 @@ const updateTrip = (req, res) => {
  * @access Private
  */
 const createTrip = (req, res) => {
-  const { userId, airport, date, timeSlot } = req.body;
+  const {
+    userId, airport, date, timeSlot
+  } = req.body;
 
   connection.query(
     'INSERT INTO Trip (userId, airport, tripDate, timeSlot) VALUES(?, ?, ?, ?)',
