@@ -6,6 +6,10 @@ const {
   deleteUser
 } = require('../controllers/users.js');
 
+router.get('/', (req, res) => {
+  res.render('dashboard');
+});
+
 router.get('/user/:id', getSingleUser);
 
 router.put('/user/:id', updateUser);
