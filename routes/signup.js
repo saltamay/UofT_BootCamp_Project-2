@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
   res.render('signup');
 });
 
-router.post('/signup', createUser, 
+router.post('/', createUser, 
 (req, res) => {
   console.log("User Added");
   res.redirect('/');

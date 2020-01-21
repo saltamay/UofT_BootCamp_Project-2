@@ -82,3 +82,42 @@ document.getElementById('airport').addEventListener('keyup', async e => {
     }
   }
 });
+
+
+// Add event listener to SignUp form submit button
+document
+  .getElementById('signup-btn')
+  // .querySelector('.search-button button')
+  .addEventListener('click', async e => {
+    e.preventDefault();
+    console.log("Hello World")
+    const airport = document.getElementById('airport').value;
+    const date = document.getElementById('date').value;
+    const time = [];
+    document.querySelectorAll('.selected').forEach(selectedTime => {
+      time.push(selectedTime.dataset.timeSlot);
+    });
+
+    const data = { airport, date, time };
+
+    try {
+      const response = await fetch('/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        const resJson = await response.json();
+
+        console.log(resJson);
+      }
+    } catch (error) {
+      if (error) {
+        console.log(error);
+        throw error;
+      }
+    }
+  });
