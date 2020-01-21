@@ -23,8 +23,7 @@ const trips = require('./routes/trips');
 const airports = require('./routes/airports');
 const login = require('./routes/login');
 const signup = require('./routes/signup');
-const viewprofile = require('./routes/my-profle');
-
+const profile = require('./routes/profile');
 
 const PORT = process.env.PORT || 3000;
 
@@ -95,8 +94,7 @@ app.use('/trips', trips);
 app.use('/airports', airports);
 app.use('/login', login);
 app.use('/signup', signup);
-app.use('/viewprofile', viewprofile);
-
+app.use('/profile', profile);
 
 app.get('/', (req, res) => res.render('index'));
 
