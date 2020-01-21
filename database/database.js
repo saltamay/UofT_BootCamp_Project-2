@@ -90,8 +90,11 @@ const database = {
           (2, 'London Heathrow Airport', '2020-02-14', ''),
           (2, 'Paris-Le Bourget Airport', '2020-02-21', ''),
           (3, 'London Gatwick Airport', '2020-02-14', ''),
-          (5, 'John F Kennedy International Airport', '2020-02-14', ''),
-          (1, 'John F Kennedy International Airport', '2020-02-14', '0,1,2')`,
+          (5, 'John F Kennedy International Airport', '2020-02-14', '0,1,2'),
+          (1, 'John F Kennedy International Airport', '2020-02-14', '1,2,3'),
+          (7, 'Lester B. Pearson International Airport', '2020-02-14', '3,4,5'),
+          (8, 'Lester B. Pearson International Airport', '2020-02-14', '0,1,2')`,
+          
       err => {
         if (err) {
           console.log(err);
