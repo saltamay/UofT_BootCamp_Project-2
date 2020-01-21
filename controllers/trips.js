@@ -1,6 +1,16 @@
 const connection = require('../config/connection');
 
 /**
+ * @description Render add-trip page
+ * @route GET /trips
+ * @access Private
+ */
+
+const addTripPage = (req, res) => {
+  return res.render('add-trip');
+};
+
+/**
  * @description Get all upcoming trips of a user
  * @route GET /trips/:userId
  * @access Private
@@ -115,6 +125,7 @@ const deleteTrip = (req, res) => {
 };
 
 module.exports = {
+  addTripPage,
   getUserTrips,
   createTrip,
   updateTrip,
