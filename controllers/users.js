@@ -91,6 +91,11 @@ const searchUsers = async (req, res) => {
             return cache[user.userId];
           }
         });
+        // const hbsObject = {
+        //   users: users
+        // }
+        // return res.render('results', hbsObject);
+
         res.status(200).json({
           success: true,
           data: users
