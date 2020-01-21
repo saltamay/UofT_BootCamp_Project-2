@@ -1,72 +1,126 @@
-// Airport Search Autocomplete
-const handleArraySelect = e => {
-  const airportInput = document.querySelector('#airportName');
-  const airportList = document.querySelector('#suggestions');
+// // Airport Search Autocomplete
+// const handleArraySelect = e => {
+//   const airportInput = document.querySelector('#airportName');
+//   const airportList = document.querySelector('#suggestions');
 
-  airportInput.value = e.currentTarget.querySelector('.airport-info').innerText;
-  airportList.innerHTML = '';
-};
-const displayMatches = AirportArray => {
-  document.getElementById('suggestions').innerHTML = '';
-  AirportArray.forEach(airport => {
-    const li = document.createElement('li');
-    li.classList.add('list-group-item', 'list-group-item-light');
-    li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
-    li.onclick = event => handleArraySelect(event);
-    document.getElementById('suggestions').appendChild(li);
-  });
-};
+//   airportInput.value = e.currentTarget.querySelector('.airport-info').innerText;
+//   airportList.innerHTML = '';
+// };
+// const displayMatches = AirportArray => {
+//   document.getElementById('suggestions').innerHTML = '';
+//   AirportArray.forEach(airport => {
+//     const li = document.createElement('li');
+//     li.classList.add('list-group-item', 'list-group-item-light');
+//     li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
+//     li.onclick = event => handleArraySelect(event);
+//     document.getElementById('suggestions').appendChild(li);
+//   });
+// };
 
-document.getElementById('airportName').addEventListener('keyup', async e => {
-  const query = e.target.value;
+// document.getElementById('airportName').addEventListener('keyup', async e => {
+//   const query = e.target.value;
 
-  if (query.length >= 3) {
-    try {
-      const res = await fetch(`/airports?search=${query}`, {
-        method: 'GET',
-        headers: {
-          'Content-type': 'application/json'
-        }
-      });
+//   if (query.length >= 3) {
+//     try {
+//       const res = await fetch(`/airports?search=${query}`, {
+//         method: 'GET',
+//         headers: {
+//           'Content-type': 'application/json'
+//         }
+//       });
 
-      if (res.ok) {
-        const jsonRes = await res.json();
-        displayMatches(jsonRes);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-});
+//       if (res.ok) {
+//         const jsonRes = await res.json();
+//         displayMatches(jsonRes);
+//       }
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+// });
 
 // Add event listeners to time slot list items
-document.querySelectorAll('.time-slots .list-group-item').forEach(listItem => {
-  listItem.addEventListener('click', e => {
-    e.target.classList.toggle('selected');
-  });
-});
+// document.querySelectorAll('.time-slots .list-group-item').forEach(listItem => {
+//   listItem.addEventListener('click', e => {
+//     e.target.classList.toggle('selected');
+//   });
+// });
 
 // Get trip info
-const getTripInfo = () => {
-  const airportName = document.getElementById('airportName').value;
-  const tripDate = document.getElementById('date').value;
-  let timeSlot = [];
-  document.querySelectorAll('.selected').forEach(selectedTime => {
-    timeSlot.push(selectedTime.dataset.timeSlot);
-  });
-  timeSlot = timeSlot.toString();
-  const data = { airportName, tripDate, timeSlot };
-  return data;
-};
+// const getTripInfo = () => {
+//   const airportName = document.getElementById('airportName').value;
+//   const tripDate = document.getElementById('date').value;
+//   let timeSlot = [];
+//   document.querySelectorAll('.selected').forEach(selectedTime => {
+//     timeSlot.push(selectedTime.dataset.timeSlot);
+//   });
+//   timeSlot = timeSlot.toString();
+//   const data = { airportName, tripDate, timeSlot };
+//   return data;
+// };
 
 // Get user info
 // TODO: Remove after authentication is implemented
-const getUserInfo = () => {
-  const userId = document.getElementById('userId').value;
-  return userId;
-};
+// const getUserInfo = () => {
+//   const userId = document.getElementById('userId').value;
+//   return userId;
+// };
 
 if (document.querySelector('#index')) {
+  // Airport Search Autocomplete
+  const handleArraySelect = e => {
+    const airportInput = document.querySelector('#airportName');
+    const airportList = document.querySelector('#suggestions');
+
+    airportInput.value = e.currentTarget.querySelector(
+      '.airport-info'
+    ).innerText;
+    airportList.innerHTML = '';
+  };
+  const displayMatches = AirportArray => {
+    document.getElementById('suggestions').innerHTML = '';
+    AirportArray.forEach(airport => {
+      const li = document.createElement('li');
+      li.classList.add('list-group-item', 'list-group-item-light');
+      li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
+      li.onclick = event => handleArraySelect(event);
+      document.getElementById('suggestions').appendChild(li);
+    });
+  };
+
+  document.getElementById('airportName').addEventListener('keyup', async e => {
+    const query = e.target.value;
+
+    if (query.length >= 3) {
+      try {
+        const res = await fetch(`/airports?search=${query}`, {
+          method: 'GET',
+          headers: {
+            'Content-type': 'application/json'
+          }
+        });
+
+        if (res.ok) {
+          const jsonRes = await res.json();
+          displayMatches(jsonRes);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  });
+  // Get trip info
+  const getTripInfo = () => {
+    const airportName = document.getElementById('airportName').value;
+    const tripDate = document.getElementById('date').value;
+    let timeSlot = [];
+    document.querySelectorAll('.selected').forEach(selectedTime => {
+      timeSlot.push(selectedTime.dataset.timeSlot);
+    });
+    timeSlot = timeSlot.toString();
+    const data = { airportName, tripDate, timeSlot };
+    return data;
+  };
   // Add event listener to search form submit button
   document
     .querySelector('.search-button button')
@@ -180,6 +234,77 @@ if (document.querySelector('#signup')) {
 }
 
 if (document.querySelector('#add-trip')) {
+  // Airport Search Autocomplete
+  const handleArraySelect = e => {
+    const airportInput = document.querySelector('#airportName');
+    const airportList = document.querySelector('#suggestions');
+
+    airportInput.value = e.currentTarget.querySelector(
+      '.airport-info'
+    ).innerText;
+    airportList.innerHTML = '';
+  };
+  const displayMatches = AirportArray => {
+    document.getElementById('suggestions').innerHTML = '';
+    AirportArray.forEach(airport => {
+      const li = document.createElement('li');
+      li.classList.add('list-group-item', 'list-group-item-light');
+      li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
+      li.onclick = event => handleArraySelect(event);
+      document.getElementById('suggestions').appendChild(li);
+    });
+  };
+
+  // Add event listeners to time slot list items
+  document
+    .querySelectorAll('.time-slots .list-group-item')
+    .forEach(listItem => {
+      listItem.addEventListener('click', e => {
+        e.target.classList.toggle('selected');
+      });
+    });
+
+  // Get trip info
+  const getTripInfo = () => {
+    const airportName = document.getElementById('airportName').value;
+    const tripDate = document.getElementById('date').value;
+    let timeSlot = [];
+    document.querySelectorAll('.selected').forEach(selectedTime => {
+      timeSlot.push(selectedTime.dataset.timeSlot);
+    });
+    timeSlot = timeSlot.toString();
+    const data = { airportName, tripDate, timeSlot };
+    return data;
+  };
+
+  // Get user info
+  // TODO: Remove after authentication is implemented
+  const getUserInfo = () => {
+    const userId = document.getElementById('userId').value;
+    return userId;
+  };
+
+  document.getElementById('airportName').addEventListener('keyup', async e => {
+    const query = e.target.value;
+
+    if (query.length >= 3) {
+      try {
+        const res = await fetch(`/airports?search=${query}`, {
+          method: 'GET',
+          headers: {
+            'Content-type': 'application/json'
+          }
+        });
+
+        if (res.ok) {
+          const jsonRes = await res.json();
+          displayMatches(jsonRes);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  });
   // Add event listener to search form submit button
   document
     .querySelector('.addtrip-button button')
