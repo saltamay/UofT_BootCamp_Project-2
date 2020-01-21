@@ -1,0 +1,44 @@
+{{> nav }}
+<div id="signup" class="container mt-5">
+  <form class="mt-5">
+    <h6 class="form-title mt-3">ADD A TRIP</h6>
+    <hr>
+    <div class="form-row mt-3">
+
+      <div class="col">
+        <Label>USER ID : </Label>
+        <input id="userId" type="text" class="form-control" placeholder="John">
+        <ul id="suggestions" class="list-group"></ul>
+      </div>
+
+      <div class="col">
+        <Label>AIRPORT NAME : </Label>
+        <input id="airportName" type="text" class="form-control" placeholder="Doe">
+        <ul id="suggestions" class="list-group"></ul>
+      </div>
+
+    </div>
+
+    <div class="form-row mt-3">
+
+      <div class="col">
+        <Label>TIME SLOT : </Label>
+        <br>
+            <input id="email" type="email" name="emailaddress"  class="form-control" >
+      </div>
+      
+      <div class="col">
+        <Label>DATE : </Label>
+        <input id="birthdate" type="date" class="form-control" placeholder="Date">
+        <ul id="suggestions" class="list-group"></ul>
+
+       </div>
+    </div>
+
+
+    <div class="addtrip-button">
+      <button type="submit" class="btn btn-lg mt-5 col-4">Add Trip</button>
+    </div>
+
+    </form>
+</div>
