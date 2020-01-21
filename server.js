@@ -22,6 +22,7 @@ const users = require('./routes/users');
 const trips = require('./routes/trips');
 const airports = require('./routes/airports');
 const login = require('./routes/login');
+const signup = require('./routes/signup');
 
 const PORT = process.env.PORT || 3000;
 
@@ -33,7 +34,6 @@ const PORT = process.env.PORT || 3000;
 // will be set at `req.user` in route handlers after authentication.
 passport.use(
   new Strategy((username, password, cb) => {
-    console.log('start');
     dbLogin.findByUsername(username, (err, user) => {
       if (err) {
         return cb(err);
@@ -92,6 +92,7 @@ app.use('/users', users);
 app.use('/trips', trips);
 app.use('/airports', airports);
 app.use('/login', login);
+app.use('/signup', signup);
 
 app.get('/', (req, res) => res.render('index'));
 
