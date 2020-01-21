@@ -78,8 +78,9 @@ const updateTrip = (req, res) => {
  * @access Private
  */
 const createTrip = (req, res) => {
-
-  const { userId, airportName, tripDate, timeSlot } = req.body;
+  const {
+    userId, airportName, tripDate, timeSlot
+  } = req.body;
 
   const airport = airportName.split(', ')[0];
 

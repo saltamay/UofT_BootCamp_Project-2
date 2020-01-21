@@ -90,6 +90,28 @@ if (document.querySelector('#index')) {
           const resJson = await response.json();
 
           console.log(resJson);
+
+          let html = '<div class="row">';
+
+          resJson.data.forEach(user => {
+            html += `
+            
+            <div class="col-5">
+                <h1  class="card-title">${user.firstName} ${user.lastName}</h1>
+                <div class="card-body">
+                    <p class="card-text">${user.tagline}</p class="card-text"> </p>
+                    <p class="card-text">${user.bio} </p>
+                    <p class="card-text">${user.birthDate}</p>
+                    <p class="card-text">${user.relationshipStatus}</p>
+                </div>
+            </div>
+            
+            `;
+          });
+          html += '</div>';
+          console.log(html);
+
+          document.getElementById('index').innerHTML = html;
         }
       } catch (error) {
         if (error) {

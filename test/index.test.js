@@ -203,8 +203,9 @@ describe('/trips', () => {
       it('should return 200 status code', async () => {
         const trip = {
           userId: 3,
-          airport: 'London Gatwick Airport',
-          date: '2020-02-14'
+          airportName: 'London Gatwick Airport',
+          tripDate: '2020-02-14',
+          timeSlot: ''
         };
 
         const response = await request(app)
