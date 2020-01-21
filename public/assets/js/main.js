@@ -1,84 +1,145 @@
-// Add event listeners to time slot list items
-document.querySelectorAll('.time-slots .list-group-item').forEach(listItem => {
-  listItem.addEventListener('click', e => {
-    e.target.classList.toggle('selected');
-  });
-});
-
-// Add event listener to search form submit button
-document
-  .querySelector('.search-button button')
-  .addEventListener('click', async e => {
-    e.preventDefault();
-
-    const airport = document.getElementById('airport').value;
-    const date = document.getElementById('date').value;
-    const time = [];
-    document.querySelectorAll('.selected').forEach(selectedTime => {
-      time.push(selectedTime.dataset.timeSlot);
+if (document.querySelector('#index')) {
+  // Add event listeners to time slot list items
+  document
+    .querySelectorAll('.time-slots .list-group-item')
+    .forEach(listItem => {
+      listItem.addEventListener('click', e => {
+        e.target.classList.toggle('selected');
+      });
     });
+  // Add event listener to search form submit button
+  document
+    .querySelector('.search-button button')
+    .addEventListener('click', async e => {
+      e.preventDefault();
 
-    const data = { airport, date, time };
-
-    try {
-      const response = await fetch('/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+      const airport = document.getElementById('airport').value;
+      const date = document.getElementById('date').value;
+      const time = [];
+      document.querySelectorAll('.selected').forEach(selectedTime => {
+        time.push(selectedTime.dataset.timeSlot);
       });
 
-      if (response.ok) {
-        const resJson = await response.json();
+      const data = { airport, date, time };
 
-        console.log(resJson);
-      }
-    } catch (error) {
-      if (error) {
-        console.log(error);
-        throw error;
-      }
-    }
-  });
+      try {
+        const response = await fetch('/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
 
-// Airport Search Autocomplete
-const handleArraySelect = e => {
-  const airportInput = document.querySelector('#airport');
-  const airportList = document.querySelector('#suggestions');
+        if (response.ok) {
+          const resJson = await response.json();
 
-  airportInput.value = e.currentTarget.querySelector('.airport-info').innerText;
-  airportList.innerHTML = '';
-};
-const displayMatches = AirportArray => {
-  document.getElementById('suggestions').innerHTML = '';
-  AirportArray.forEach(airport => {
-    const li = document.createElement('li');
-    li.classList.add('list-group-item', 'list-group-item-light');
-    li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
-    li.onclick = event => handleArraySelect(event);
-    document.getElementById('suggestions').appendChild(li);
-  });
-};
-
-document.getElementById('airport').addEventListener('keyup', async e => {
-  const query = e.target.value;
-
-  if (query.length >= 3) {
-    try {
-      const res = await fetch(`/airports?search=${query}`, {
-        method: 'GET',
-        headers: {
-          'Content-type': 'application/json'
+          console.log(resJson);
         }
-      });
-
-      if (res.ok) {
-        const jsonRes = await res.json();
-        displayMatches(jsonRes);
+      } catch (error) {
+        if (error) {
+          console.log(error);
+          throw error;
+        }
       }
-    } catch (error) {
-      console.log(error);
+    });
+  // Airport Search Autocomplete
+  const handleArraySelect = e => {
+    const airportInput = document.querySelector('#airport');
+    const airportList = document.querySelector('#suggestions');
+
+    airportInput.value = e.currentTarget.querySelector(
+      '.airport-info'
+    ).innerText;
+    airportList.innerHTML = '';
+  };
+  const displayMatches = AirportArray => {
+    document.getElementById('suggestions').innerHTML = '';
+    AirportArray.forEach(airport => {
+      const li = document.createElement('li');
+      li.classList.add('list-group-item', 'list-group-item-light');
+      li.innerHTML = `<span class="airport-info">${airport.airportName}, ${airport.city}</span>`;
+      li.onclick = event => handleArraySelect(event);
+      document.getElementById('suggestions').appendChild(li);
+    });
+  };
+
+  document.getElementById('airport').addEventListener('keyup', async e => {
+    const query = e.target.value;
+
+    if (query.length >= 3) {
+      try {
+        const res = await fetch(`/airports?search=${query}`, {
+          method: 'GET',
+          headers: {
+            'Content-type': 'application/json'
+          }
+        });
+
+        if (res.ok) {
+          const jsonRes = await res.json();
+          displayMatches(jsonRes);
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
-  }
-});
+  });
+}
+
+if (document.querySelector('#signup')) {
+  document
+    .querySelector('.signup-button button')
+    .addEventListener('click', async e => {
+      e.preventDefault();
+
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const birthDate = document.getElementById('birthdate').value;
+      const gender = document.querySelector('input[name="gender"]:checked')
+        .value;
+      const relationshipStatus = document.querySelector(
+        'input[name="relationship"]:checked'
+      ).value;
+      const height = document.getElementById('height').value;
+      const hairColor = document.getElementById('hairColor').value;
+      const bio = document.getElementById('bio').value;
+      const imageUrl = document.getElementById('imageUrl').value;
+
+      const newUser = {
+        firstName,
+        lastName,
+        email,
+        birthDate,
+        gender,
+        relationshipStatus,
+        height,
+        hairColor,
+        bio,
+        imageUrl
+      };
+
+      try {
+        const response = await fetch('/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(newUser),
+          redirect: 'follow'
+        });
+
+        if (response.ok) {
+          const resJson = await response.json();
+          console.log(resJson);
+          window.location.href = '/';
+        }
+      } catch (error) {
+        if (error) {
+          console.log(error);
+          throw error;
+        }
+      }
+    });
+}
