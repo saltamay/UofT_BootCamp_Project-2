@@ -1,0 +1,26 @@
+{{> nav }}
+
+
+<div class="container-fluid">
+    {{#each user}}
+
+        <div class="row">
+            <div class="col-5">
+                <h1>Hello, {{ firstName }} {{ lastName }}</h1>
+                <p>{{ tagline }}</p>
+                <p>{{ bio }}</p>
+                <p>{{ birthdate }}</p>
+                <p>{{ relationshipStatus }}</p>
+            </div>
+        </div>
+    {{/each}}
+
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-lg btn-primary mt-3" type="submit">Update Profile</button>
+                <button class="btn btn-lg btn-danger mt-3" type="submit">Delete Profile</button>
+            </div>
+        </div>
+
+</div>
+
