@@ -67,6 +67,15 @@
 // };
 
 if (document.querySelector('#index')) {
+  // Add event listeners to time slot list items
+  document
+    .querySelectorAll('.time-slots .list-group-item')
+    .forEach(listItem => {
+      listItem.addEventListener('click', e => {
+        e.target.classList.toggle('selected');
+      });
+    });
+
   // Airport Search Autocomplete
   const handleArraySelect = e => {
     const airportInput = document.querySelector('#airportName');
